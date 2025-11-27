@@ -248,4 +248,46 @@ html[dir="rtl"] .contact-extra {
   .contact-grid {
     grid-template-columns: 1fr;
   }
+  /* ===== Main top navigation ===== */
+
+.main-nav {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0.35rem 0 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+  font-size: 0.95rem;
+}
+
+.main-nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+
+.main-nav a:hover {
+  color: var(--accent);
+}
+
+.main-nav a.active-link {
+  color: var(--accent);
+}
+
+.main-nav a.active-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.25rem;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 999px;
+}
+
+/* RTL alignment for main nav */
+html[dir="rtl"] .main-nav {
+  justify-content: flex-end;
+}
 }
