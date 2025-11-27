@@ -29,6 +29,35 @@ body {
   padding: 3.5rem 1.5rem 2.5rem;
 }
 
+/* نوار زبان بالای هدر */
+.top-lang-bar {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0.5rem 0 0.25rem;
+}
+
+/* منوی زبان */
+.lang-nav a,
+.lang-nav a:visited {
+  color: var(--accent);
+  text-decoration: none;
+  margin-right: 0.75rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.lang-nav a:last-child {
+  margin-right: 0;
+}
+
+.lang-nav a:hover {
+  color: #ffffff;
+}
+
+.lang-nav a.active-lang {
+  text-decoration: underline;
+}
+
 .hero-inner {
   max-width: 1080px;
   margin: 0 auto;
