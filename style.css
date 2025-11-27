@@ -216,14 +216,32 @@ body {
   font-size: 0.95rem;
 }
 
-.main-nav a {
+/* لینک‌های عادی منو */
+.main-nav a,
+.main-nav a:visited {
   color: var(--text);
   text-decoration: none;
   font-weight: 500;
   position: relative;
 }
 
-.main-nav a:hover {
+/* دکمه‌ی اصلی منو (مثل دسته‌بندی محصولات) */
+.nav-primary-btn {
+  padding: 0.55rem 1.4rem;
+  border-radius: 999px;
+  border: 1px solid var(--accent);
+  background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+  color: var(--bg) !important;
+  box-shadow: 0 0 18px rgba(245, 210, 122, 0.3);
+  font-weight: 600;
+}
+
+.nav-primary-btn:hover {
+  filter: brightness(1.05);
+}
+
+/* hover برای بقیه لینک‌ها */
+.main-nav a:not(.nav-primary-btn):hover {
   color: var(--accent);
 }
 
