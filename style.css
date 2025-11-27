@@ -108,6 +108,11 @@ body {
   margin-bottom: 1rem;
 }
 
+/* متن داخل سکشن‌ها محدود و خواناتر شود */
+.section-inner p {
+  max-width: 60rem;
+}
+
 /* Cards */
 
 .cards {
@@ -170,12 +175,41 @@ body {
   font-size: 0.9rem;
 }
 
+/* ===== RTL support for Persian / Arabic pages ===== */
+
+html[dir="rtl"] body {
+  direction: rtl;
+}
+
+html[dir="rtl"] .hero-inner,
+html[dir="rtl"] .section-inner,
+html[dir="rtl"] .cards,
+html[dir="rtl"] .contact-grid,
+html[dir="rtl"] .footer-inner {
+  text-align: right;
+}
+
+html[dir="rtl"] .logo-block {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .card,
+html[dir="rtl"] .founder-text,
+html[dir="rtl"] .contact-info,
+html[dir="rtl"] .contact-extra {
+  text-align: right;
+}
+
 /* Responsive */
 
 @media (max-width: 768px) {
   .hero-inner {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  html[dir="rtl"] .hero-inner {
+    align-items: flex-end;
   }
 
   .cards {
