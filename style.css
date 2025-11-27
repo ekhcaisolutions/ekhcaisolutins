@@ -18,7 +18,7 @@
 
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  /* بدنه مثل قبل: گرادیان تیره */
+  /* بدنه: همون گراديان قبلی */
   background: radial-gradient(circle at top, #121824 0, #05070a 60%);
   color: var(--text);
   line-height: 1.6;
@@ -27,14 +27,25 @@ body {
 /* Hero (هدر بالا) */
 .hero {
   padding: 3.5rem 1.5rem 2.5rem;
-  /* هدر رنگ جدا داشته باشد، مثل AUT:
-     یک نوار تیره‌تر که به بدنه محو می‌شود */
+  position: relative;
+  /* هدر رنگ جدا داشته باشد */
+  background: #020308;
+}
+
+/* خط جداکننده بين هدر و بخش About */
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
   background: linear-gradient(
-    to bottom,
-    #020308 0%,
-    rgba(5, 7, 10, 0.0) 100%
+    to right,
+    transparent,
+    rgba(245, 210, 122, 0.8),
+    transparent
   );
-  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
 }
 
 /* نوار زبان بالای هدر */
@@ -110,7 +121,7 @@ body {
   font-size: 0.95rem;
 }
 
-/* دکمه اصلی بالا (Request a Consultation) */
+/* دکمه اصلی بالا */
 
 .btn-primary {
   padding: 0.85rem 1.8rem;
@@ -200,7 +211,7 @@ body {
   font-size: 0.9rem;
 }
 
-/* Footer (فوتر همون قبلی بماند) */
+/* Footer */
 
 .footer {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
@@ -227,7 +238,6 @@ body {
 }
 
 /* دکمه طلایی Services – مستطیل */
-
 .main-nav .nav-primary-btn {
   padding: 0.55rem 1.8rem;
   border-radius: var(--radius);
