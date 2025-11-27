@@ -102,6 +102,8 @@ body {
   font-size: 0.95rem;
 }
 
+/* دکمه اصلی بالا (Request a Consultation) */
+
 .btn-primary {
   padding: 0.85rem 1.8rem;
   border-radius: 999px;
@@ -209,40 +211,38 @@ body {
 .main-nav {
   max-width: 1080px;
   margin: 0 auto;
-  padding: 0.35rem 0 0.75rem;
+  padding: 0.9rem 0 0.75rem;
   display: flex;
   align-items: center;
   gap: 1.8rem;
   font-size: 0.95rem;
 }
 
-/* لینک‌های عادی منو */
-.main-nav a,
-.main-nav a:visited {
+/* دکمه طلایی Services – مستطیل با گوشه گرد شبیه ستاره‌انرژی */
+
+.main-nav .nav-primary-btn {
+  padding: 0.55rem 1.8rem;
+  border-radius: var(--radius);       /* اینجا مستطیل با گوشه گرد */
+  border: 1px solid var(--accent);
+  background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+  color: var(--bg);
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 0 18px rgba(245, 210, 122, 0.35);
+}
+
+.main-nav .nav-primary-btn:hover {
+  filter: brightness(1.05);
+}
+
+.main-nav a {
   color: var(--text);
   text-decoration: none;
   font-weight: 500;
   position: relative;
 }
 
-/* دکمه طلایی اول منو (شبیه دسته‌بندی محصولات) */
-.main-nav a.nav-primary-btn {
-  padding: 0.55rem 1.5rem;
-  border-radius: 999px;
-  border: 1px solid var(--accent);
-  background: linear-gradient(135deg, var(--accent), var(--accent-soft));
-  color: var(--bg);
-  box-shadow: 0 0 18px rgba(245, 210, 122, 0.3);
-  font-weight: 600;
-}
-
-/* hover برای دکمه */
-.main-nav a.nav-primary-btn:hover {
-  filter: brightness(1.05);
-}
-
-/* hover برای بقیه لینک‌ها */
-.main-nav a:not(.nav-primary-btn):hover {
+.main-nav a:hover {
   color: var(--accent);
 }
 
@@ -309,5 +309,10 @@ html[dir="rtl"] .contact-extra {
 
   .contact-grid {
     grid-template-columns: 1fr;
+  }
+
+  .main-nav {
+    flex-wrap: wrap;
+    gap: 1rem;
   }
 }
