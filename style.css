@@ -225,18 +225,19 @@ body {
   position: relative;
 }
 
-/* دکمه‌ی اصلی منو (مثل دسته‌بندی محصولات) */
-.nav-primary-btn {
-  padding: 0.55rem 1.4rem;
+/* دکمه طلایی اول منو (شبیه دسته‌بندی محصولات) */
+.main-nav a.nav-primary-btn {
+  padding: 0.55rem 1.5rem;
   border-radius: 999px;
   border: 1px solid var(--accent);
   background: linear-gradient(135deg, var(--accent), var(--accent-soft));
-  color: var(--bg) !important;
+  color: var(--bg);
   box-shadow: 0 0 18px rgba(245, 210, 122, 0.3);
   font-weight: 600;
 }
 
-.nav-primary-btn:hover {
+/* hover برای دکمه */
+.main-nav a.nav-primary-btn:hover {
   filter: brightness(1.05);
 }
 
