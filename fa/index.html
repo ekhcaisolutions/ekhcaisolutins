@@ -17,15 +17,36 @@
 </head>
 <body>
 
-  <!-- ===== هدر با نوار زبان، لوگو و دکمه CTA ===== -->
+  <!-- ===== هدر با نوار زبان، لوگو و دکمه‌ها ===== -->
   <header class="site-header">
-    <!-- سوییچ زبان -->
+    <!-- نوار بالا: ورود / ثبت نام / درخواست + زبان -->
     <div class="top-lang-bar">
-      <nav class="lang-nav">
-        <a href="../">EN</a> |
-        <a href="./" class="active-lang">FA</a> |
-        <a href="../ar/">AR</a>
-      </nav>
+      <div class="top-bar-inner">
+        <!-- دکمه‌های ورود / ثبت نام / درخواست (صفحه جدا در پوشه fa) -->
+        <div class="top-auth">
+          <a href="login.html" class="top-link">
+            <span class="top-link-icon">🔐</span>
+            <span>ورود</span>
+          </a>
+          <span class="dot-separator">•</span>
+          <a href="login.html#signup" class="top-link">
+            <span class="top-link-icon">🧾</span>
+            <span>ثبت نام</span>
+          </a>
+          <span class="dot-separator">•</span>
+          <a href="request.html" class="top-link top-link-pill">
+            <span class="top-link-icon">✨</span>
+            <span>درخواست پروژه هوش مصنوعي</span>
+          </a>
+        </div>
+
+        <!-- سوییچ زبان -->
+        <nav class="lang-nav">
+          <a href="../">EN</a> |
+          <a href="./" class="active-lang">FA</a> |
+          <a href="../ar/">AR</a>
+        </nav>
+      </div>
     </div>
 
     <!-- هرو: لوگو + دکمه مشاوره -->
@@ -38,7 +59,7 @@
             <p class="tagline">هوشمندسازي و اتوماسيون؛ مهندسي شده براي برتري.</p>
           </div>
         </div>
-        <a href="#contact" class="btn-primary">درخواست مشاوره</a>
+        <a href="request.html" class="btn-primary">درخواست مشاوره</a>
       </div>
 
       <!-- نوار منو + دکمه طلایی «خدمات» -->
