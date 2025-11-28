@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>ورود / ثبت نام – E.Kh.C.A.I Solutions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="درگاه مشتريان E.Kh.C.A.I Solutions – ورود و ثبت نام براي مديريت پروژه‌هاي هوش مصنوعي و اتوماسيون.">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="top-lang-bar">
+      <div class="top-bar-inner">
+        <div class="top-auth">
+          <a href="login.html" class="top-link">
+            <span class="top-link-icon">🔐</span>
+            <span>ورود</span>
+          </a>
+          <span class="dot-separator">•</span>
+          <a href="login.html#signup" class="top-link">
+            <span class="top-link-icon">🧾</span>
+            <span>ثبت نام</span>
+          </a>
+          <span class="dot-separator">•</span>
+          <a href="request.html" class="top-link top-link-pill">
+            <span class="top-link-icon">✨</span>
+            <span>درخواست پروژه هوش مصنوعي</span>
+          </a>
+        </div>
+
+        <nav class="lang-nav">
+          <a href="../">EN</a> |
+          <a href="./" class="active-lang">FA</a> |
+          <a href="../ar/">AR</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="hero">
+      <div class="hero-inner">
+        <div class="logo-block">
+          <div class="logo-circle">E.Kh</div>
+          <div class="logo-text">
+            <h1>E.Kh.C.A.I <span>Solutions</span></h1>
+            <p class="tagline">درگاه مشتريان – دسترسي امن به پروژه‌ها.</p>
+          </div>
+        </div>
+        <a href="index.html#contact" class="btn-primary">بازگشت به سايت اصلي</a>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html#top">خانه</a>
+        <a href="index.html#services">خدمات</a>
+        <a href="index.html#founder">بنيانگذار</a>
+        <a href="index.html#contact">ارتباط با ما</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="login" class="section section-alt portal-section">
+      <div class="section-inner portal-inner">
+        <h2>درگاه مشتريان</h2>
+        <p class="portal-subtitle">
+          براي مشاهده وضعيت پروژه‌هاي اتوماسيون و هوش مصنوعي خود وارد شويد، يا يک حساب جديد ايجاد کنيد.
+        </p>
+        <div class="portal-grid">
+          <!-- ثبت نام -->
+          <div id="signup" class="portal-card">
+            <h3>ثبت نام</h3>
+            <p class="portal-text">
+              اگر براي اولين بار با ما کار مي‌کنيد، اطلاعات زير را وارد کنيد تا فضاي اختصاصي براي کسب‌وکار شما ساخته شود.
+            </p>
+            <form action="#" method="post" class="portal-form">
+              <label>
+                نام و نام خانوادگي
+                <input type="text" name="name" placeholder="مثال: اسماعيل خطارجي">
+              </label>
+              <label>
+                نام شرکت / سازمان
+                <input type="text" name="company" placeholder="نام شرکت يا برند">
+              </label>
+              <label>
+                ايميل سازماني
+                <input type="email" name="email" placeholder="name@company.com">
+              </label>
+              <label>
+                حوزه پروژه
+                <textarea name="project" rows="3" placeholder="مثال: اتوماسيون n8n، Agent هوش مصنوعي، Data Pipeline و ..."></textarea>
+              </label>
+              <button type="submit" class="btn-primary btn-full">
+                ارسال درخواست ايجاد حساب
+              </button>
+            </form>
+          </div>
+
+          <!-- ورود -->
+          <div class="portal-card portal-card-accent">
+            <h3>ورود</h3>
+            <p class="portal-text">
+              اگر قبلاً با E.Kh.C.A.I Solutions کار کرده‌ايد، با ايميل خود وارد شويد و وضعيت پروژه‌ها را ببينيد.
+            </p>
+            <form action="#" method="post" class="portal-form">
+              <label>
+                ايميل
+                <input type="email" name="login_email" placeholder="name@company.com">
+              </label>
+              <label>
+                گذرواژه
+                <input type="password" name="password" placeholder="••••••••">
+              </label>
+              <div class="portal-options">
+                <label class="checkbox-inline">
+                  <input type="checkbox" name="remember">
+                  <span>مرا در اين دستگاه به خاطر بسپار</span>
+                </label>
+                <a href="#" class="portal-link">گذرواژه را فراموش کرده‌ام</a>
+              </div>
+              <button type="submit" class="btn-primary btn-full">
+                ورود
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>© <span id="year"></span> E.Kh.C.A.I Solutions. تمام حقوق محفوظ است.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
