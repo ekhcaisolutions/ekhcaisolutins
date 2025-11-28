@@ -19,7 +19,7 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "اسماعیل خطارجی",
-    "alternateName": "Esmaeil Khatareji",
+    "alternateName": "Esmaeil Khataraji",
     "jobTitle": "Founder & CTO",
     "worksFor": {
       "@type": "Organization",
@@ -30,92 +30,10 @@
   </script>
 
   <link rel="stylesheet" href="style.css">
-
-  <style>
-    /* --- فقط استایل‌های لازم برای منوی جدید --- */
-
-    .hero-main {
-      max-width: 1080px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 2.5rem;
-    }
-
-    .hero-left {
-      display: flex;
-      flex-direction: column;
-      gap: 1.4rem;
-    }
-
-    .nav-row {
-      display: flex;
-      align-items: center;
-      gap: 1.8rem;
-      font-size: 0.98rem;
-    }
-
-    .nav-pill {
-      padding: 0.55rem 1.6rem;
-      border-radius: 999px;
-      border: 1px solid var(--accent);
-      background: linear-gradient(135deg, var(--accent), var(--accent-soft));
-      color: var(--bg);
-      font-weight: 600;
-      text-decoration: none;
-      box-shadow: 0 0 20px rgba(245,210,122,.35);
-      white-space: nowrap;
-    }
-
-    .nav-pill:hover {
-      filter: brightness(1.05);
-    }
-
-    .nav-link {
-      color: var(--text);
-      text-decoration: none;
-      position: relative;
-      font-weight: 500;
-    }
-
-    .nav-link:hover {
-      color: var(--accent);
-    }
-
-    .nav-link.active-link {
-      color: var(--accent);
-    }
-
-    .nav-link.active-link::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: -0.25rem;
-      height: 2px;
-      border-radius: 999px;
-      background: var(--accent);
-    }
-
-    .hero-divider {
-      max-width: 1080px;
-      margin: 1.5rem auto 0;
-      border: 0;
-      border-top: 1px solid rgba(255,255,255,0.06);
-    }
-
-    @media (max-width: 768px) {
-      .hero-main {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
-  </style>
 </head>
 <body>
   <header class="hero" id="top">
-    <!-- language switch – top bar -->
+    <!-- زبان‌ها -->
     <div class="top-lang-bar">
       <nav class="lang-nav">
         <a href="./" class="active-lang">EN</a> |
@@ -124,34 +42,30 @@
       </nav>
     </div>
 
-    <!-- main hero header: logo + nav + CTA -->
-    <div class="hero-main">
-      <div class="hero-left">
-        <div class="logo-block">
-          <div class="logo-circle">E.Kh</div>
-          <div class="logo-text">
-            <h1>E.Kh.C.A.I <span>Solutions</span></h1>
-            <p class="tagline">Intelligent Automation. Engineered for Excellence.</p>
-          </div>
+    <!-- لوگو + دکمه‌ها -->
+    <div class="hero-inner">
+      <div class="logo-block">
+        <div class="logo-circle">E.Kh</div>
+        <div class="logo-text">
+          <h1>E.Kh.C.A.I <span>Solutions</span></h1>
+          <p class="tagline">Intelligent Automation. Engineered for Excellence.</p>
         </div>
-
-        <nav class="nav-row">
-          <!-- دکمه مستطیلی Services -->
-          <a href="#services" class="nav-pill">Services</a>
-
-          <!-- لینک‌های ساده -->
-          <a href="#top" class="nav-link active-link">Home</a>
-          <a href="#about" class="nav-link">About</a>
-          <a href="#founder" class="nav-link">Founder</a>
-          <a href="#contact" class="nav-link">Contact</a>
-        </nav>
       </div>
 
-      <a href="#contact" class="btn-primary">Request a Consultation</a>
+      <a href="#contact" class="btn-primary hero-cta">Request a Consultation</a>
     </div>
 
-    <!-- خط جداکننده هدر و بدنه -->
-    <hr class="hero-divider">
+    <!-- نوار منو (Services به‌صورت دکمه طلایی) -->
+    <div class="hero-nav">
+      <nav class="main-nav">
+        <a href="#services" class="btn-primary btn-services">Services</a>
+
+        <a href="#top" class="nav-link active-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#founder" class="nav-link">Founder</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+    </div>
   </header>
 
   <main>
@@ -174,21 +88,23 @@
         <h2>Services</h2>
         <div class="cards">
           <article class="card">
-            <h3>Automation &amp; Workflows</h3>
+            <h3>Automation & Workflows</h3>
             <p>
               Design and implementation of smart workflows using tools like n8n,
               APIs and custom integrations to remove repetitive work and reduce errors.
             </p>
           </article>
+
           <article class="card">
-            <h3>AI &amp; Data Engineering</h3>
+            <h3>AI & Data Engineering</h3>
             <p>
               Building AI-powered systems, data pipelines, and analytics solutions
               to turn raw data into intelligent decisions.
             </p>
           </article>
+
           <article class="card">
-            <h3>Scraping &amp; DevOps Infrastructure</h3>
+            <h3>Scraping & DevOps Infrastructure</h3>
             <p>
               High-reliability web scraping, Dockerized services, Linux servers,
               and performance-tuned infrastructure for production environments.
@@ -202,7 +118,7 @@
     <section id="founder" class="section">
       <div class="section-inner founder">
         <div class="founder-text">
-          <h2>Founder &amp; CTO</h2>
+          <h2>Founder & CTO</h2>
           <h3>Dr. Eng. Esmaeil Khatareji</h3>
           <p>
             Advanced specialist in intelligent automation, operating systems,
