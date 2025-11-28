@@ -32,6 +32,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- ===== HERO / HEADER ===== -->
   <header class="hero" id="top">
     <!-- زبان‌ها -->
     <div class="top-lang-bar">
@@ -42,7 +43,7 @@
       </nav>
     </div>
 
-    <!-- لوگو + دکمه‌ها -->
+    <!-- لوگو + CTA -->
     <div class="hero-inner">
       <div class="logo-block">
         <div class="logo-circle">E.Kh</div>
@@ -51,38 +52,42 @@
           <p class="tagline">Intelligent Automation. Engineered for Excellence.</p>
         </div>
       </div>
-
-      <a href="#contact" class="btn-primary hero-cta">Request a Consultation</a>
+      <a href="#contact" class="btn-primary">Request a Consultation</a>
     </div>
 
-    <!-- نوار منو (Services به‌صورت دکمه طلایی) -->
-    <div class="hero-nav">
+    <!-- ردیف منو اصلی + باتن Services -->
+    <div class="primary-nav-row">
+      <a href="#services" class="services-button">Services</a>
       <nav class="main-nav">
-        <a href="#services" class="btn-primary btn-services">Services</a>
-
-        <a href="#top" class="nav-link active-link">Home</a>
-        <a href="#about" class="nav-link">About</a>
-        <a href="#founder" class="nav-link">Founder</a>
-        <a href="#contact" class="nav-link">Contact</a>
+        <a href="#top" class="active-link">Home</a>
+        <a href="#about">About</a>
+        <a href="#founder">Founder</a>
+        <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
+  <!-- خط جداکننده طلایی زیر هدر -->
+  <div class="header-separator"></div>
+
   <main>
-    <!-- About -->
+    <!-- ===== ABOUT ===== -->
     <section id="about" class="section">
       <div class="section-inner">
         <h2>About E.Kh.C.A.I Solutions</h2>
         <p>
-          E.Kh.C.A.I Solutions is a high-performance technology company focused on
-          intelligent automation, AI engineering, and data-driven systems design.
-          Founded and led by <strong>Dr. Eng. Esmaeil Khatareji</strong>, the company
-          builds reliable, scalable and secure solutions for modern businesses.
+          E.Kh.C.A.I Solutions is a high-performance technology company focused on intelligent automation,
+          AI engineering, and data-driven systems design. Founded and led by
+          <strong>Dr. Eng. Esmaeil Khatareji</strong>, the company builds reliable, scalable and secure
+          solutions for modern businesses.
         </p>
       </div>
     </section>
 
-    <!-- Services -->
+    <!-- خط جداکننده بین سکشن‌ها -->
+    <div class="section-separator"></div>
+
+    <!-- ===== SERVICES ===== -->
     <section id="services" class="section section-alt">
       <div class="section-inner">
         <h2>Services</h2>
@@ -90,54 +95,57 @@
           <article class="card">
             <h3>Automation & Workflows</h3>
             <p>
-              Design and implementation of smart workflows using tools like n8n,
-              APIs and custom integrations to remove repetitive work and reduce errors.
+              Design and implementation of smart workflows using tools like n8n, APIs and custom
+              integrations to remove repetitive work, reduce human error, and improve execution speed.
             </p>
           </article>
 
           <article class="card">
             <h3>AI & Data Engineering</h3>
             <p>
-              Building AI-powered systems, data pipelines, and analytics solutions
-              to turn raw data into intelligent decisions.
+              Building AI-powered systems, data pipelines, and analytics solutions to turn raw data into
+              intelligent, actionable decisions for your business.
             </p>
           </article>
 
           <article class="card">
             <h3>Scraping & DevOps Infrastructure</h3>
             <p>
-              High-reliability web scraping, Dockerized services, Linux servers,
-              and performance-tuned infrastructure for production environments.
+              High-reliability web scraping, Dockerized services, Linux servers, and performance-tuned
+              infrastructure designed for production workloads.
             </p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Founder -->
+    <div class="section-separator"></div>
+
+    <!-- ===== FOUNDER ===== -->
     <section id="founder" class="section">
       <div class="section-inner founder">
         <div class="founder-text">
-          <h2>Founder & CTO</h2>
+          <h2>Founder &amp; CTO</h2>
           <h3>Dr. Eng. Esmaeil Khatareji</h3>
           <p>
-            Advanced specialist in intelligent automation, operating systems,
-            high-performance computing, and cloud/server architecture.
-            He leads the design and engineering of all E.Kh.C.A.I Solutions projects
-            with a focus on reliability, performance, and security.
+            Advanced specialist in intelligent automation, operating systems, high-performance computing,
+            and cloud/server architecture. He leads the design and engineering of all E.Kh.C.A.I Solutions
+            projects with a focus on reliability, performance, and security.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Contact -->
+    <div class="section-separator"></div>
+
+    <!-- ===== CONTACT ===== -->
     <section id="contact" class="section section-alt">
       <div class="section-inner">
         <h2>Contact</h2>
         <p>
-          For collaborations, automation projects, AI systems or consulting,
-          use the contact details below.
+          For collaborations, automation projects, AI systems or consulting, use the contact details below.
         </p>
+
         <div class="contact-grid">
           <div class="contact-info">
             <p><strong>Phone (WhatsApp):</strong> +98 902 573 8264</p>
@@ -146,7 +154,8 @@
           </div>
           <div class="contact-extra">
             <p class="small-note">
-              You can also save the contact using the QR code on the business card.
+              You can also save the contact using the QR code on the business card or share the link to this
+              page with your team for technical discussions.
             </p>
           </div>
         </div>
@@ -154,6 +163,7 @@
     </section>
   </main>
 
+  <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="footer-inner">
       <p>© <span id="year"></span> E.Kh.C.A.I Solutions. All rights reserved.</p>
