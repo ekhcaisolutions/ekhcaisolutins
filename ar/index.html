@@ -4,45 +4,167 @@
   <meta charset="UTF-8">
   <title>E.Kh.C.A.I Solutions – حلول الذكاء الاصطناعي والأتمتة الذكية</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="E.Kh.C.A.I Solutions – شركة متخصصة في حلول الذكاء الاصطناعي، الأتمتة الذكية وهندسة البيانات بقيادة الدكتور والمهندس ذو التخصص الدقيق إسماعيل خطارجي.">
-
+  <meta name="description" content="E.Kh.C.A.I Solutions – مزود حلول الذكاء الاصطناعي، الأتمتة الذكية وهندسة البيانات بإشراف الدكتور والمهندس المتخصص إسماعيل خطارجي.">
+  
+  <!-- hreflang / canonical -->
   <link rel="canonical" href="https://ekhcaisolutions.github.io/ekhcaisolutins/ar/" />
   <link rel="alternate" hreflang="fa" href="https://ekhcaisolutions.github.io/ekhcaisolutins/fa/" />
   <link rel="alternate" hreflang="ar" href="https://ekhcaisolutions.github.io/ekhcaisolutins/ar/" />
   <link rel="alternate" hreflang="en" href="https://ekhcaisolutions.github.io/ekhcaisolutins/" />
   <link rel="alternate" hreflang="x-default" href="https://ekhcaisolutions.github.io/ekhcaisolutins/" />
-
+  
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <header class="hero" id="top">
-    <div class="hero-inner">
-      <div class="logo-block">
-        <div class="logo-circle">E.Kh</div>
-        <div class="logo-text">
-          <h1>E.Kh.C.A.I <span>Solutions</span></h1>
-          <p class="tagline">حلول ذكية. أتمتة متقدمة. هندسة مبنية على الأداء.</p>
+
+  <!-- ===== الهيدر مع شريط اللغة وأزرار الدخول ===== -->
+  <header class="site-header">
+    <div class="top-lang-bar">
+      <div class="top-bar-inner">
+        <!-- أزرار الدخول / التسجيل / طلب مشروع -->
+        <div class="top-auth">
+          <a href="login.html" class="top-link">
+            <span class="top-link-icon">🔐</span>
+            <span>دخول</span>
+          </a>
+          <span class="dot-separator">•</span>
+          <a href="login.html#signup" class="top-link">
+            <span class="top-link-icon">🧾</span>
+            <span>تسجيل</span>
+          </a>
+          <span class="dot-separator">•</span>
+          <a href="request.html" class="top-link top-link-pill">
+            <span class="top-link-icon">✨</span>
+            <span>طلب مشروع ذكاء اصطناعي</span>
+          </a>
         </div>
+
+        <!-- تبديل اللغة -->
+        <nav class="lang-nav">
+          <a href="../">EN</a> |
+          <a href="../fa/">FA</a> |
+          <a href="./" class="active-lang">AR</a>
+        </nav>
       </div>
-      <a href="#contact" class="btn-primary">طلب استشارة</a>
+    </div>
+
+    <!-- الهيرو: الشعار + زر طلب استشارة -->
+    <div class="hero" id="top">
+      <div class="hero-inner">
+        <div class="logo-block">
+          <div class="logo-circle">E.Kh</div>
+          <div class="logo-text">
+            <h1>E.Kh.C.A.I <span>Solutions</span></h1>
+            <p class="tagline">أتمتة ذكية وهندسة عالية الأداء لتحقيق التميز.</p>
+          </div>
+        </div>
+        <a href="request.html" class="btn-primary">طلب استشارة</a>
+      </div>
+
+      <!-- شريط القائمة الرئيسي + الأزرار الذهبية -->
+      <nav class="main-nav">
+        <!-- زر الخدمات -->
+        <button class="nav-primary-btn" id="servicesToggle" type="button">
+          الخدمات
+        </button>
+
+        <!-- زر الهندسة وخدمات الذكاء الاصطناعي -->
+        <button class="nav-primary-btn" id="engineeringToggle" type="button">
+          الهندسة وخدمات الذكاء الاصطناعي
+        </button>
+
+        <a href="#top" class="active-link">الرئيسية</a>
+        <a href="#about">من نحن</a>
+        <a href="#founder">المؤسس</a>
+        <a href="#contact">اتصل بنا</a>
+      </nav>
     </div>
   </header>
 
+  <!-- ===== قائمة منسدلة للخدمات ===== -->
+  <div class="services-panel" id="servicesPanel">
+    <div class="services-panel-inner">
+      <div class="services-columns">
+        <div class="services-col">
+          <h4>الأتمتة و Workflow</h4>
+          <ul>
+            <li><a href="#services">أتمتة عمليات الأعمال</a></li>
+            <li><a href="#services">تكامل n8n وواجهات API</a></li>
+            <li><a href="#services">مسارات أتمتة التسويق</a></li>
+          </ul>
+        </div>
+        <div class="services-col">
+          <h4>الذكاء الاصطناعي وهندسة البيانات</h4>
+          <ul>
+            <li><a href="#services">مساعدون أذكياء مبنيون على LLM</a></li>
+            <li><a href="#services">Data Pipeline و ETL</a></li>
+            <li><a href="#services">تحليلات ولوحات معلومات إدارية</a></li>
+          </ul>
+        </div>
+        <div class="services-col">
+          <h4>Scraping وبنية DevOps</h4>
+          <ul>
+            <li><a href="#services">بنية Scraping عالية الاعتمادية</a></li>
+            <li><a href="#services">Docker وتقسية خوادم Linux</a></li>
+            <li><a href="#services">المراقبة وتحسين الأداء</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== قائمة منسدلة للهندسة وخدمات الذكاء الاصطناعي ===== -->
+  <div class="services-panel" id="engineeringPanel">
+    <div class="services-panel-inner">
+      <div class="services-columns">
+        <div class="services-col">
+          <h4>أنظمة الذكاء الاصطناعي والأتمتة</h4>
+          <ul>
+            <li><a href="#engineering-ai-services">أنظمة ذكاء اصطناعي وأتمتة ذكية</a></li>
+            <li><a href="#engineering-ai-services">تطوير البرمجيات بمساعدة AI</a></li>
+            <li><a href="#engineering-ai-services">وكلاء مؤسسيون ذاتيون</a></li>
+            <li><a href="#engineering-ai-services">تحسين Kernel و IPC</a></li>
+          </ul>
+        </div>
+        <div class="services-col">
+          <h4>DevOps، السحابة والأمن</h4>
+          <ul>
+            <li><a href="#engineering-ai-services">هندسة DevOps والسحابة</a></li>
+            <li><a href="#engineering-ai-services">ذكاء اصطناعي للأمن واكتشاف التهديدات</a></li>
+            <li><a href="#engineering-ai-services">مراقبة الشبكة و NoC الذكية</a></li>
+            <li><a href="#engineering-ai-services">خدمات إدارة البنية التحتية IT</a></li>
+          </ul>
+        </div>
+        <div class="services-col">
+          <h4>البيانات، Edge والذكاء التحليلي</h4>
+          <ul>
+            <li><a href="#engineering-ai-services">هندسة بيانات و ETL ذكية</a></li>
+            <li><a href="#engineering-ai-services">ذكاء المستندات و OCR متعدد اللغات</a></li>
+            <li><a href="#engineering-ai-services">نماذج Edge AI و IoT</a></li>
+            <li><a href="#engineering-ai-services">لوحات BI تنبؤية وتحليل فيديو</a></li>
+            <li><a href="#engineering-ai-services">التدريب والإرشاد في AI</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== المحتوى ===== -->
   <main>
-    <!-- About -->
+    <!-- من نحن -->
     <section id="about" class="section">
       <div class="section-inner">
-        <h2>حول E.Kh.C.A.I Solutions</h2>
+        <h2>عن E.Kh.C.A.I Solutions</h2>
         <p>
-          شركة E.Kh.C.A.I Solutions هي شركة تكنولوجية عالية الأداء تركز على الأتمتة الذكية،
-          هندسة الذكاء الاصطناعي وتصميم الأنظمة المعتمدة على البيانات. تقود الشركة
-          <strong>الدكتور والمهندس ذو التخصص الدقيق إسماعيل خطارجي</strong>
-          مع تركيز على بناء حلول موثوقة، قابلة للتوسع وآمنة لبيئات العمل الحديثة.
+          شركة E.Kh.C.A.I Solutions هي شركة تكنولوجيا تركز على الأتمتة الذكية، هندسة الذكاء الاصطناعي
+          وتصميم الأنظمة المعتمدة على البيانات. بقيادة
+          <strong>الدكتور والمهندس المتخصص إسماعيل خطارجي</strong>، تقدم الشركة حلولاً موثوقة، قابلة للتوسع وآمنة
+          للأعمال الحديثة.
         </p>
       </div>
     </section>
 
-    <!-- Services -->
+    <!-- الخدمات -->
     <section id="services" class="section section-alt">
       <div class="section-inner">
         <h2>الخدمات</h2>
@@ -50,60 +172,188 @@
           <article class="card">
             <h3>الأتمتة و Workflow</h3>
             <p>
-              تصميم وتنفيذ مسارات عمل ذكية باستخدام n8n، واجهات API والتكاملات المخصصة
+              تصميم وتنفيذ مسارات عمل ذكية باستخدام n8n وواجهات API وتكاملات مخصصة
               لإزالة الأعمال المتكررة وتقليل الأخطاء.
             </p>
           </article>
           <article class="card">
             <h3>الذكاء الاصطناعي وهندسة البيانات</h3>
             <p>
-              بناء أنظمة مدعومة بالذكاء الاصطناعي، خطوط بيانات (Data Pipelines)
-              وحلول تحليلية لتحويل البيانات الخام إلى قرارات ذكية.
+              بناء أنظمة مدعومة بالذكاء الاصطناعي، Data Pipeline وحلول تحليلات
+              لتحويل البيانات الخام إلى قرارات ذكية.
             </p>
           </article>
           <article class="card">
-            <h3>Scraping والبنية التحتية DevOps</h3>
+            <h3>Scraping وبنية DevOps</h3>
             <p>
-              أنظمة Scraping موثوقة، خدمات مبنية على Docker، خوادم Linux
-              وبنية تحتية مضبوطة للأداء لبيئات الإنتاج.
+              Scrapers عالية الاعتمادية، خدمات Docker، خوادم Linux
+              وبنية محسّنة لبيئات الإنتاج.
             </p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Founder -->
+    <!-- الهندسة وخدمات الذكاء الاصطناعي -->
+    <section id="engineering-ai-services" class="section">
+      <div class="section-inner">
+        <h2>الهندسة وخدمات الذكاء الاصطناعي</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>أنظمة ذكاء اصطناعي وأتمتة ذكية</h3>
+            <p>
+              تصميم وكلاء أذكياء، مسارات تلقائية للزحف وإنتاج المحتوى،
+              وتكامل LLM مع أنظمة ERP و CRM و Helpdesk.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>هندسة DevOps والسحابة</h3>
+            <p>
+              تصميم ونشر خطوط CI/CD، بنية Docker-first، تقسية Linux،
+              والمراقبة وإدارة الحاويات والـ VM على نطاق واسع.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>ذكاء اصطناعي للأمن واكتشاف التهديدات</h3>
+            <p>
+              اختبار اختراق الويب، اكتشاف أنماط الهجوم بالذكاء الاصطناعي،
+              تحليل السجلات باستخدام LLM وتقسية الخوادم والشبكات.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>تطوير البرمجيات بمساعدة AI</h3>
+            <p>
+              تطوير تطبيقات Java و Python و .NET بمساعدة الذكاء الاصطناعي،
+              واجهات برمجة تطبيقات ذكية ومراجعة شيفرة تلقائية بنماذج Code-LLM.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>هندسة بيانات و ETL ذكية</h3>
+            <p>
+              تصميم مسارات بيانات واسعة النطاق، ETL/ELT، Scraping باستخدام Playwright
+              وتصنيف البيانات بالـ ML.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>محاكاة وألعاب تعليمية</h3>
+            <p>
+              محاكيات صناعية مبنية على Unity، ألعاب ترويجية للعلامات التجارية
+              وسلوك NPC ذكي لسيناريوهات تفاعلية.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>مراقبة شبكة و NoC ذكية</h3>
+            <p>
+              مراقبة الشبكات، تنبيهات مدعومة بالـ ML، تحليل حركة المرور
+              وتحسين التوجيه والكمون.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>ذكاء المستندات و OCR متعدد اللغات</h3>
+            <p>
+              استخراج بيانات منظمة من ملفات PDF والصور، تلخيص العقود
+              و OCR بالعربية والفارسية والإنجليزية للمؤسسات.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>خدمات إدارة البنية التحتية IT</h3>
+            <p>
+              إدارة الشبكات، مراكز المراقبة NOC، الافتراضية باستخدام VMware/ESXi
+              ودعم طويل الأمد للبنية التحتية.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>التدريب والإرشاد في AI</h3>
+            <p>
+              دورات مخصصة في Python و Java والذكاء الاصطناعي،
+              إضافة إلى الإرشاد لفرق الهندسة والمطورين.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>تحسين Kernel و IPC</h3>
+            <p>
+              تحسين مسارات Kernel وآليات IPC ومسارات I/O
+              لخفض زمن الاستجابة ورفع أداء النظام.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>نماذج Edge AI و IoT</h3>
+            <p>
+              تصميم نماذج خفيفة للأجهزة ذات الموارد المحدودة
+              مع مسارات نشر جاهزة لبيئات Edge.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>لوحات BI ذكية</h3>
+            <p>
+              لوحات معلومات تجارية مع توقعات المبيعات، تحليل الاتجاهات و KPI
+              باستخدام نماذج تعلم الآلة المتقدمة.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>تحليل فيديو ذكي</h3>
+            <p>
+              تحليل فيديو في الزمن الحقيقي للأمن، عدّ الأشخاص
+              وتحليل السلوك في المساحات الفيزيائية.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>وكلاء مؤسسيون ذاتيون</h3>
+            <p>
+              وكلاء مؤسسيون يديرون المهام اليومية مثل التقارير والمراقبة
+              والمتابعة دون إرهاق فريق التطوير.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- المؤسس -->
     <section id="founder" class="section">
       <div class="section-inner founder">
         <div class="founder-text">
           <h2>المؤسس و CTO</h2>
-          <h3>الدكتور والمهندس ذو التخصص الدقيق إسماعيل خطارجي</h3>
+          <h3>الدكتور والمهندس المتخصص إسماعيل خطارجي</h3>
           <p>
             متخصص متقدم في الأتمتة الذكية، أنظمة التشغيل، الحوسبة عالية الأداء
-            ومعمارية الخوادم و Cloud. يشرف على تصميم وهندسة جميع مشاريع
-            E.Kh.C.A.I Solutions مع تركيز قوي على الاعتمادية، الأداء والأمان.
+            وهندسة الخوادم والسحابة. يتم تصميم وهندسة جميع مشاريع E.Kh.C.A.I Solutions
+            تحت إشرافه مع تركيز على الاعتمادية، الأداء والأمن.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Contact -->
+    <!-- اتصل بنا -->
     <section id="contact" class="section section-alt">
       <div class="section-inner">
-        <h2>التواصل</h2>
+        <h2>اتصل بنا</h2>
         <p>
           للتعاون، تنفيذ مشاريع الأتمتة، أنظمة الذكاء الاصطناعي أو الاستشارات المتخصصة
-          استخدم بيانات التواصل التالية.
+          استخدم بيانات الاتصال التالية.
         </p>
         <div class="contact-grid">
           <div class="contact-info">
-            <p><strong>الهاتف (واتساب):</strong> ‎+98 902 573 8264</p>
+            <p><strong>الهاتف (واتساب):</strong> ‎+98 902 573 8264‎</p>
             <p><strong>البريد الإلكتروني:</strong> ekhcaisolutions@gmail.com</p>
             <p><strong>الموقع:</strong> www.ekhcai.com (قريباً)</p>
           </div>
           <div class="contact-extra">
             <p class="small-note">
-              يمكنك أيضاً حفظ معلومات الاتصال باستخدام QR Code الموجود على بطاقة العمل.
+              يمكنك أيضاً حفظ بيانات الاتصال باستخدام رمز QR على بطاقة العمل.
             </p>
           </div>
         </div>
@@ -111,13 +361,79 @@
     </section>
   </main>
 
+  <!-- ===== الفوتر ===== -->
   <footer class="footer">
     <div class="footer-inner">
       <p>© <span id="year"></span> E.Kh.C.A.I Solutions. جميع الحقوق محفوظة.</p>
     </div>
-    <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
   </footer>
+
+  <!-- سكربت السنة والقوائم المنسدلة -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    (function () {
+      const servicesToggle    = document.getElementById('servicesToggle');
+      const servicesPanel     = document.getElementById('servicesPanel');
+      const engineeringToggle = document.getElementById('engineeringToggle');
+      const engineeringPanel  = document.getElementById('engineeringPanel');
+
+      function closeAllPanels() {
+        if (servicesPanel) {
+          servicesPanel.classList.remove('open');
+        }
+        if (servicesToggle) {
+          servicesToggle.classList.remove('is-open');
+        }
+        if (engineeringPanel) {
+          engineeringPanel.classList.remove('open');
+        }
+        if (engineeringToggle) {
+          engineeringToggle.classList.remove('is-open');
+        }
+      }
+
+      if (servicesToggle && servicesPanel) {
+        servicesToggle.addEventListener('click', function (e) {
+          e.stopPropagation();
+          const willOpen = !servicesPanel.classList.contains('open');
+          closeAllPanels();
+          if (willOpen) {
+            servicesPanel.classList.add('open');
+            servicesToggle.classList.add('is-open');
+          }
+        });
+      }
+
+      if (engineeringToggle && engineeringPanel) {
+        engineeringToggle.addEventListener('click', function (e) {
+          e.stopPropagation();
+          const willOpen = !engineeringPanel.classList.contains('open');
+          closeAllPanels();
+          if (willOpen) {
+            engineeringPanel.classList.add('open');
+            engineeringToggle.classList.add('is-open');
+          }
+        });
+      }
+
+      document.addEventListener('click', function (e) {
+        if (
+          servicesPanel   && !servicesPanel.contains(e.target) &&
+          engineeringPanel && !engineeringPanel.contains(e.target) &&
+          e.target !== servicesToggle &&
+          e.target !== engineeringToggle
+        ) {
+          closeAllPanels();
+        }
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          closeAllPanels();
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
