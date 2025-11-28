@@ -45,7 +45,7 @@
     </div>
 
     <!-- لوگو + CTA بالا -->
-    <div class="hero">
+    <div class="hero" id="top">
       <div class="hero-inner">
         <div class="logo-block">
           <div class="logo-circle">E.Kh</div>
@@ -57,9 +57,13 @@
         <a href="#contact" class="btn-primary">Request a Consultation</a>
       </div>
 
-      <!-- نوار اصلی منو + دکمه Services شبیه دکمه‌های بالایی -->
+      <!-- نوار اصلی منو + دکمه Services -->
       <nav class="main-nav">
-        <button class="nav-cta">Services</button>
+        <!-- دکمه طلایی Services با منوی بازشونده -->
+        <button class="nav-primary-btn" id="servicesToggle" type="button">
+          Services
+        </button>
+
         <a href="#top" class="active-link">Home</a>
         <a href="about/">About</a>
         <a href="founder/">Founder</a>
@@ -68,8 +72,37 @@
     </div>
   </header>
 
-  <!-- ===== فاصله و جداکننده زیر هدر ===== -->
-  <div class="header-divider"></div>
+  <!-- ===== منوی بازشونده‌ی Services ===== -->
+  <div class="services-panel" id="servicesPanel">
+    <div class="services-panel-inner">
+      <div class="services-columns">
+        <div class="services-col">
+          <h4>Automation & Workflows</h4>
+          <ul>
+            <li><a href="#services">Business Process Automation</a></li>
+            <li><a href="#services">n8n & API Orchestration</a></li>
+            <li><a href="#services">Marketing Automation Pipelines</a></li>
+          </ul>
+        </div>
+        <div class="services-col">
+          <h4>AI & Data Engineering</h4>
+          <ul>
+            <li><a href="#services">LLM-powered Assistants</a></li>
+            <li><a href="#services">Data Pipelines & ETL</a></li>
+            <li><a href="#services">Analytics & Dashboards</a></li>
+          </ul>
+        </div>
+        <div class="services-col">
+          <h4>Scraping & DevOps</h4>
+          <ul>
+            <li><a href="#services">Web Scraping Infrastructure</a></li>
+            <li><a href="#services">Docker & Linux Hardening</a></li>
+            <li><a href="#services">Monitoring & Performance Tuning</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- ===== MAIN (بدنه سایت، پس‌زمینه سیاه ثابت) ===== -->
   <main>
@@ -161,9 +194,42 @@
     <div class="footer-inner">
       <p>© <span id="year"></span> E.Kh.C.A.I Solutions. All rights reserved.</p>
     </div>
-    <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
   </footer>
+
+  <!-- اسکریپت‌های ساده -->
+  <script>
+    // سال فوتر
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // منوی بازشونده‌ی Services
+    (function () {
+      const toggle = document.getElementById('servicesToggle');
+      const panel  = document.getElementById('servicesPanel');
+      if (!toggle || !panel) return;
+
+      function closePanel() {
+        panel.classList.remove('open');
+        toggle.classList.remove('is-open');
+      }
+
+      toggle.addEventListener('click', function (e) {
+        e.stopPropagation();
+        const isOpen = panel.classList.toggle('open');
+        toggle.classList.toggle('is-open', isOpen);
+      });
+
+      document.addEventListener('click', function (e) {
+        if (!panel.contains(e.target) && e.target !== toggle) {
+          closePanel();
+        }
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          closePanel();
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
