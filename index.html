@@ -33,7 +33,7 @@
 </head>
 <body>
 
-  <!-- ===== HEADER (هدر جدا با رنگ خودش) ===== -->
+  <!-- ===== HEADER ===== -->
   <header class="site-header">
     <!-- language switch -->
     <div class="top-lang-bar">
@@ -57,11 +57,16 @@
         <a href="#contact" class="btn-primary">Request a Consultation</a>
       </div>
 
-      <!-- نوار اصلی منو + دکمه Services -->
+      <!-- نوار اصلی منو -->
       <nav class="main-nav">
-        <!-- دکمه طلایی Services با منوی بازشونده -->
+        <!-- دکمه طلایی Services با منوی خودش -->
         <button class="nav-primary-btn" id="servicesToggle" type="button">
           Services
+        </button>
+
+        <!-- دکمه جداگانه Engineering & AI Services با منوی خودش -->
+        <button class="nav-primary-btn" id="engineeringToggle" type="button">
+          Engineering &amp; AI Services
         </button>
 
         <a href="#top" class="active-link">Home</a>
@@ -80,33 +85,67 @@
           <h4>Automation & Workflows</h4>
           <ul>
             <li><a href="#services">Business Process Automation</a></li>
-            <li><a href="#services">n8n & API Orchestration</a></li>
+            <li><a href="#services">n8n &amp; API Orchestration</a></li>
             <li><a href="#services">Marketing Automation Pipelines</a></li>
-            <!-- دکمه جدید برای بخش مهندسی و هوش مصنوعی -->
-            <li><a href="#engineering-ai-services">Engineering & AI Services</a></li>
           </ul>
         </div>
         <div class="services-col">
-          <h4>AI & Data Engineering</h4>
+          <h4>AI &amp; Data Engineering</h4>
           <ul>
             <li><a href="#services">LLM-powered Assistants</a></li>
-            <li><a href="#services">Data Pipelines & ETL</a></li>
-            <li><a href="#services">Analytics & Dashboards</a></li>
+            <li><a href="#services">Data Pipelines &amp; ETL</a></li>
+            <li><a href="#services">Analytics &amp; Dashboards</a></li>
           </ul>
         </div>
         <div class="services-col">
-          <h4>Scraping & DevOps</h4>
+          <h4>Scraping &amp; DevOps</h4>
           <ul>
             <li><a href="#services">Web Scraping Infrastructure</a></li>
-            <li><a href="#services">Docker & Linux Hardening</a></li>
-            <li><a href="#services">Monitoring & Performance Tuning</a></li>
+            <li><a href="#services">Docker &amp; Linux Hardening</a></li>
+            <li><a href="#services">Monitoring &amp; Performance Tuning</a></li>
           </ul>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ===== MAIN (بدنه سایت، پس‌زمینه سیاه ثابت) ===== -->
+  <!-- ===== منوی بازشونده‌ی Engineering & AI Services ===== -->
+  <div class="services-panel" id="engineeringPanel">
+    <div class="services-panel-inner">
+      <div class="services-columns">
+        <div class="services-col">
+          <h4>AI Systems &amp; Software</h4>
+          <ul>
+            <li><a href="#engineering-ai-services">AI Systems &amp; Intelligent Automation</a></li>
+            <li><a href="#engineering-ai-services">AI-Enhanced Software Development</a></li>
+            <li><a href="#engineering-ai-services">Autonomous Enterprise Agents</a></li>
+            <li><a href="#engineering-ai-services">AI Kernel Optimization &amp; System Tuning</a></li>
+          </ul>
+        </div>
+        <div class="services-col">
+          <h4>DevOps, Cloud &amp; Security</h4>
+          <ul>
+            <li><a href="#engineering-ai-services">DevOps &amp; Cloud Engineering</a></li>
+            <li><a href="#engineering-ai-services">Cybersecurity &amp; Threat Detection AI</a></li>
+            <li><a href="#engineering-ai-services">Smart Network &amp; NoC Automation</a></li>
+            <li><a href="#engineering-ai-services">IT Engineering &amp; Managed Services</a></li>
+          </ul>
+        </div>
+        <div class="services-col">
+          <h4>Data, Edge &amp; Intelligence</h4>
+          <ul>
+            <li><a href="#engineering-ai-services">Data Engineering &amp; ETL Automation</a></li>
+            <li><a href="#engineering-ai-services">AI Document Intelligence &amp; OCR</a></li>
+            <li><a href="#engineering-ai-services">Edge AI &amp; IoT Models</a></li>
+            <li><a href="#engineering-ai-services">AI BI Dashboards &amp; Video Analytics</a></li>
+            <li><a href="#engineering-ai-services">AI Training &amp; Education Services</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MAIN ===== -->
   <main>
     <!-- About -->
     <section id="about" class="section">
@@ -127,21 +166,21 @@
         <h2>Services</h2>
         <div class="cards">
           <article class="card">
-            <h3>Automation & Workflows</h3>
+            <h3>Automation &amp; Workflows</h3>
             <p>
               Design and implementation of smart workflows using tools like n8n,
               APIs and custom integrations to remove repetitive work and reduce errors.
             </p>
           </article>
           <article class="card">
-            <h3>AI & Data Engineering</h3>
+            <h3>AI &amp; Data Engineering</h3>
             <p>
               Building AI-powered systems, data pipelines, and analytics solutions
               to turn raw data into intelligent decisions.
             </p>
           </article>
           <article class="card">
-            <h3>Scraping & DevOps Infrastructure</h3>
+            <h3>Scraping &amp; DevOps Infrastructure</h3>
             <p>
               High-reliability web scraping, Dockerized services, Linux servers,
               and performance-tuned infrastructure for production environments.
@@ -151,13 +190,13 @@
       </div>
     </section>
 
-    <!-- NEW: Engineering & AI Services (بر اساس رزومه و سرویس‌های خاص) -->
+    <!-- Engineering & AI Services -->
     <section id="engineering-ai-services" class="section">
       <div class="section-inner">
-        <h2>Engineering & AI Services</h2>
+        <h2>Engineering &amp; AI Services</h2>
         <div class="cards">
           <article class="card">
-            <h3>AI Systems & Intelligent Automation</h3>
+            <h3>AI Systems &amp; Intelligent Automation</h3>
             <p>
               Design of intelligent agents, automated content and crawling pipelines,
               and LLM integrations for ERP, CRM and Helpdesk systems.
@@ -165,7 +204,7 @@
           </article>
 
           <article class="card">
-            <h3>DevOps & Cloud Engineering</h3>
+            <h3>DevOps &amp; Cloud Engineering</h3>
             <p>
               CI/CD pipelines, Docker-first architectures, Linux hardening,
               monitoring stacks and scalable VM/container management.
@@ -173,7 +212,7 @@
           </article>
 
           <article class="card">
-            <h3>Cybersecurity & Threat Detection AI</h3>
+            <h3>Cybersecurity &amp; Threat Detection AI</h3>
             <p>
               Web penetration testing, AI-driven attack pattern detection,
               log analysis with LLMs and hardened server/network configurations.
@@ -189,7 +228,7 @@
           </article>
 
           <article class="card">
-            <h3>Data Engineering & ETL Automation</h3>
+            <h3>Data Engineering &amp; ETL Automation</h3>
             <p>
               End-to-end data pipelines, large-scale ETL/ELT, Playwright-based
               scraping and ML-based data classification for businesses.
@@ -197,7 +236,7 @@
           </article>
 
           <article class="card">
-            <h3>Game Development & Simulation Systems</h3>
+            <h3>Game Development &amp; Simulation Systems</h3>
             <p>
               Unity-based simulations for industry and training, promotional games
               and AI-driven NPC behavior for interactive scenarios.
@@ -205,7 +244,7 @@
           </article>
 
           <article class="card">
-            <h3>Smart Network & NoC Automation</h3>
+            <h3>Smart Network &amp; NoC Automation</h3>
             <p>
               Intelligent network monitoring, ML-powered alerting, traffic
               behavior analysis and latency/routing optimization.
@@ -213,7 +252,7 @@
           </article>
 
           <article class="card">
-            <h3>AI Document Intelligence & OCR Pipelines</h3>
+            <h3>AI Document Intelligence &amp; OCR Pipelines</h3>
             <p>
               Extraction of structured data from PDFs and images, contract
               summarization and multi-language OCR for enterprise documents.
@@ -221,7 +260,7 @@
           </article>
 
           <article class="card">
-            <h3>IT Engineering & Managed Services</h3>
+            <h3>IT Engineering &amp; Managed Services</h3>
             <p>
               Full IT infrastructure management, network operations, VMware/ESXi
               virtualization and long-term support for organizations.
@@ -229,7 +268,7 @@
           </article>
 
           <article class="card">
-            <h3>AI Training & Education Services</h3>
+            <h3>AI Training &amp; Education Services</h3>
             <p>
               Custom training programs in Python, Java and AI, plus mentoring
               for engineering teams and individual developers.
@@ -237,7 +276,7 @@
           </article>
 
           <article class="card">
-            <h3>AI Kernel Optimization & System Tuning</h3>
+            <h3>AI Kernel Optimization &amp; System Tuning</h3>
             <p>
               Optimization of kernel paths, IPC mechanisms and I/O stacks to
               reduce latency and improve system-level performance.
@@ -245,7 +284,7 @@
           </article>
 
           <article class="card">
-            <h3>Edge AI & IoT Models</h3>
+            <h3>Edge AI &amp; IoT Models</h3>
             <p>
               Design of lightweight AI models for constrained IoT devices,
               with deployment-ready pipelines for edge environments.
@@ -283,7 +322,7 @@
     <section id="founder" class="section">
       <div class="section-inner founder">
         <div class="founder-text">
-          <h2>Founder & CTO</h2>
+          <h2>Founder &amp; CTO</h2>
           <h3>Dr. Eng. Esmaeil Khatareji</h3>
           <p>
             Advanced specialist in intelligent automation, operating systems,
@@ -326,37 +365,72 @@
     </div>
   </footer>
 
-  <!-- اسکریپت‌های ساده -->
+  <!-- اسکریپت‌ها -->
   <script>
     // سال فوتر
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // منوی بازشونده‌ی Services
+    // منوهای بازشونده
     (function () {
-      const toggle = document.getElementById('servicesToggle');
-      const panel  = document.getElementById('servicesPanel');
-      if (!toggle || !panel) return;
+      const servicesToggle    = document.getElementById('servicesToggle');
+      const servicesPanel     = document.getElementById('servicesPanel');
+      const engineeringToggle = document.getElementById('engineeringToggle');
+      const engineeringPanel  = document.getElementById('engineeringPanel');
 
-      function closePanel() {
-        panel.classList.remove('open');
-        toggle.classList.remove('is-open');
+      function closeAllPanels() {
+        if (servicesPanel) {
+          servicesPanel.classList.remove('open');
+        }
+        if (servicesToggle) {
+          servicesToggle.classList.remove('is-open');
+        }
+        if (engineeringPanel) {
+          engineeringPanel.classList.remove('open');
+        }
+        if (engineeringToggle) {
+          engineeringToggle.classList.remove('is-open');
+        }
       }
 
-      toggle.addEventListener('click', function (e) {
-        e.stopPropagation();
-        const isOpen = panel.classList.toggle('open');
-        toggle.classList.toggle('is-open', isOpen);
-      });
+      if (servicesToggle && servicesPanel) {
+        servicesToggle.addEventListener('click', function (e) {
+          e.stopPropagation();
+          const willOpen = !servicesPanel.classList.contains('open');
+          closeAllPanels();
+          if (willOpen) {
+            servicesPanel.classList.add('open');
+            servicesToggle.classList.add('is-open');
+          }
+        });
+      }
+
+      if (engineeringToggle && engineeringPanel) {
+        engineeringToggle.addEventListener('click', function (e) {
+          e.stopPropagation();
+          const willOpen = !engineeringPanel.classList.contains('open');
+          closeAllPanels();
+          if (willOpen) {
+            engineeringPanel.classList.add('open');
+            engineeringToggle.classList.add('is-open');
+          }
+        });
+      }
 
       document.addEventListener('click', function (e) {
-        if (!panel.contains(e.target) && e.target !== toggle) {
-          closePanel();
+        // کلیک خارج از دو پنل
+        if (
+          servicesPanel   && !servicesPanel.contains(e.target) &&
+          engineeringPanel && !engineeringPanel.contains(e.target) &&
+          e.target !== servicesToggle &&
+          e.target !== engineeringToggle
+        ) {
+          closeAllPanels();
         }
       });
 
       document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape') {
-          closePanel();
+          closeAllPanels();
         }
       });
     })();
