@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>درخواست پروژه هوش مصنوعي – E.Kh.C.A.I Solutions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="فرم درخواست پروژه‌هاي هوش مصنوعي، اتوماسيون و مهندسي داده در E.Kh.C.A.I Solutions.">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="top-lang-bar">
+      <div class="top-bar-inner">
+        <div class="top-auth">
+          <a href="login.html" class="top-link">
+            <span class="top-link-icon">🔐</span>
+            <span>ورود</span>
+          </a>
+          <span class="dot-separator">•</span>
+          <a href="login.html#signup" class="top-link">
+            <span class="top-link-icon">🧾</span>
+            <span>ثبت نام</span>
+          </a>
+          <span class="dot-separator">•</span>
+          <a href="request.html" class="top-link top-link-pill">
+            <span class="top-link-icon">✨</span>
+            <span>درخواست پروژه هوش مصنوعي</span>
+          </a>
+        </div>
+
+        <nav class="lang-nav">
+          <a href="../">EN</a> |
+          <a href="./" class="active-lang">FA</a> |
+          <a href="../ar/">AR</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="hero">
+      <div class="hero-inner">
+        <div class="logo-block">
+          <div class="logo-circle">E.Kh</div>
+          <div class="logo-text">
+            <h1>E.Kh.C.A.I <span>Solutions</span></h1>
+            <p class="tagline">ايده‌ات را بگو؛ ما هوش مصنوعي و اتوماسيونش مي‌کنيم.</p>
+          </div>
+        </div>
+        <a href="index.html#services" class="btn-primary">بازگشت به خدمات</a>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html#top">خانه</a>
+        <a href="index.html#services">خدمات</a>
+        <a href="index.html#founder">بنيانگذار</a>
+        <a href="index.html#contact">ارتباط با ما</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="request" class="section section-alt portal-section">
+      <div class="section-inner portal-inner">
+        <h2>فرم درخواست پروژه هوش مصنوعي / اتوماسيون</h2>
+        <p class="portal-subtitle">
+          چند خط درباره نياز، محدوديت‌ها و زمان‌بندي بنويسيد تا يک طرح فني و نقشه راه برايتان آماده کنيم.
+        </p>
+        <form action="#" method="post" class="portal-form request-form">
+          <label>
+            نام و نام خانوادگي
+            <input type="text" name="req_name" placeholder="نام شما">
+          </label>
+          <label>
+            نام شرکت / سازمان
+            <input type="text" name="req_company" placeholder="نام شرکت يا برند">
+          </label>
+          <label>
+            ايميل سازماني
+            <input type="email" name="req_email" placeholder="name@company.com">
+          </label>
+          <label>
+            نوع پروژه
+            <input type="text" name="req_type" placeholder="مثال: Agent هوش مصنوعي، Data Pipeline، DevOps، داشبورد تحليلي و ...">
+          </label>
+          <label>
+            شرح پروژه
+            <textarea name="req_desc" rows="4" placeholder="توضيح دهيد چه چيزي مي‌خواهيد خودکار يا بهينه شود."></textarea>
+          </label>
+          <label>
+            بازه زماني تقريبي
+            <input type="text" name="req_timeline" placeholder="مثال: ۴ تا ۸ هفته">
+          </label>
+          <button type="submit" class="btn-primary">
+            ارسال درخواست
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>© <span id="year"></span> E.Kh.C.A.I Solutions. تمام حقوق محفوظ است.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
