@@ -18,26 +18,44 @@
 
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  /* بدنه: همون گراديان قبلی */
   background: radial-gradient(circle at top, #121824 0, #05070a 60%);
   color: var(--text);
   line-height: 1.6;
 }
 
-/* ===== HERO / HEADER ===== */
-
+/* Hero (هدر بالا) */
 .hero {
-  padding: 2.5rem 1.5rem 1.75rem;
-  background: radial-gradient(circle at top, #141a26 0, #05070a 60%);
+  padding: 3.5rem 1.5rem 2.5rem;
+  position: relative;
+  /* هدر رنگ جدا داشته باشد */
+  background: #020308;
 }
 
-/* زبان‌ها بالا */
+/* خط جداکننده بين هدر و بخش About */
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(245, 210, 122, 0.8),
+    transparent
+  );
+}
 
+/* نوار زبان بالای هدر */
 .top-lang-bar {
   max-width: 1080px;
   margin: 0 auto;
-  padding: 0.25rem 0 0.25rem;
+  padding: 0.5rem 0 0.25rem;
 }
 
+/* منوی زبان */
 .lang-nav a,
 .lang-nav a:visited {
   color: var(--accent);
@@ -59,11 +77,9 @@ body {
   text-decoration: underline;
 }
 
-/* لوگو + CTA */
-
 .hero-inner {
   max-width: 1080px;
-  margin: 0.75rem auto 0;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -77,8 +93,8 @@ body {
 }
 
 .logo-circle {
-  width: 72px;
-  height: 72px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   border: 2px solid var(--accent);
   display: flex;
@@ -105,103 +121,24 @@ body {
   font-size: 0.95rem;
 }
 
+/* دکمه اصلی بالا */
+
 .btn-primary {
-  padding: 0.95rem 2.4rem;
+  padding: 0.85rem 1.8rem;
   border-radius: 999px;
   border: 1px solid var(--accent);
   color: var(--bg);
   background: linear-gradient(135deg, var(--accent), var(--accent-soft));
   text-decoration: none;
   font-weight: 600;
-  box-shadow: 0 0 30px rgba(245, 210, 122, 0.4);
-  white-space: nowrap;
+  box-shadow: 0 0 25px rgba(245, 210, 122, 0.35);
 }
 
 .btn-primary:hover {
   filter: brightness(1.05);
 }
 
-/* ===== NAV ROW (Services button + links) ===== */
-
-.primary-nav-row {
-  max-width: 1080px;
-  margin: 1.9rem auto 0;
-  display: flex;
-  align-items: center;
-  gap: 2.5rem;
-}
-
-.services-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.8rem 2.4rem;
-  border-radius: 999px;
-  border: 1px solid var(--accent);
-  background: linear-gradient(135deg, var(--accent), var(--accent-soft));
-  color: var(--bg);
-  text-decoration: none;
-  font-weight: 600;
-  box-shadow: 0 0 22px rgba(245, 210, 122, 0.35);
-}
-
-.services-button:hover {
-  filter: brightness(1.05);
-}
-
-.main-nav {
-  display: flex;
-  align-items: center;
-  gap: 2.2rem;
-  font-size: 0.98rem;
-}
-
-.main-nav a {
-  color: var(--text);
-  text-decoration: none;
-  font-weight: 500;
-  position: relative;
-  padding-bottom: 0.25rem;
-}
-
-.main-nav a:hover {
-  color: var(--accent);
-}
-
-.main-nav a.active-link {
-  color: var(--accent);
-}
-
-.main-nav a.active-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -0.2rem;
-  height: 2px;
-  background: var(--accent);
-  border-radius: 999px;
-}
-
-/* ===== GOLD SEPARATORS ===== */
-
-.header-separator {
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(to right, var(--accent), var(--accent-soft));
-  opacity: 0.9;
-  margin: 0 0 1.5rem;
-}
-
-.section-separator {
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(to right, var(--accent), var(--accent-soft));
-  opacity: 0.9;
-  margin: 2.2rem 0;
-}
-
-/* ===== SECTIONS ===== */
+/* Sections */
 
 .section {
   padding: 3rem 1.5rem;
@@ -217,15 +154,16 @@ body {
 }
 
 .section h2 {
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   margin-bottom: 1rem;
 }
 
+/* متن داخل سکشن‌ها محدود و خواناتر شود */
 .section-inner p {
   max-width: 60rem;
 }
 
-/* ===== CARDS ===== */
+/* Cards */
 
 .cards {
   display: grid;
@@ -246,7 +184,7 @@ body {
   color: var(--accent);
 }
 
-/* ===== FOUNDER ===== */
+/* Founder */
 
 .founder {
   display: flex;
@@ -259,7 +197,7 @@ body {
   color: var(--accent);
 }
 
-/* ===== CONTACT ===== */
+/* Contact */
 
 .contact-grid {
   display: grid;
@@ -273,7 +211,7 @@ body {
   font-size: 0.9rem;
 }
 
-/* ===== FOOTER ===== */
+/* Footer */
 
 .footer {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
@@ -287,7 +225,66 @@ body {
   font-size: 0.9rem;
 }
 
-/* ===== RTL SUPPORT FOR FA / AR PAGES ===== */
+/* ===== Main top navigation ===== */
+
+.main-nav {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0.9rem 0 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+  font-size: 0.95rem;
+}
+
+/* دکمه طلایی Services – مستطیل */
+.main-nav .nav-primary-btn {
+  padding: 0.55rem 1.8rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--accent);
+  background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+  color: var(--bg);
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 0 18px rgba(245, 210, 122, 0.35);
+}
+
+.main-nav .nav-primary-btn:hover {
+  filter: brightness(1.05);
+}
+
+.main-nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+
+.main-nav a:hover {
+  color: var(--accent);
+}
+
+.main-nav a.active-link {
+  color: var(--accent);
+}
+
+.main-nav a.active-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.25rem;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 999px;
+}
+
+/* RTL alignment for main nav */
+html[dir="rtl"] .main-nav {
+  justify-content: flex-end;
+}
+
+/* ===== RTL support for Persian / Arabic pages ===== */
 
 html[dir="rtl"] body {
   direction: rtl;
@@ -312,35 +309,15 @@ html[dir="rtl"] .contact-extra {
   text-align: right;
 }
 
-html[dir="rtl"] .primary-nav-row {
-  flex-direction: row-reverse;
-  justify-content: flex-end;
-}
+/* Responsive */
 
-html[dir="rtl"] .main-nav {
-  flex-direction: row-reverse;
-}
-
-/* ===== RESPONSIVE ===== */
-
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .hero-inner {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .primary-nav-row {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-  }
-
-  .services-button {
-    order: -1;
-  }
-
-  html[dir="rtl"] .hero-inner,
-  html[dir="rtl"] .primary-nav-row {
+  html[dir="rtl"] .hero-inner {
     align-items: flex-end;
   }
 
@@ -350,5 +327,10 @@ html[dir="rtl"] .main-nav {
 
   .contact-grid {
     grid-template-columns: 1fr;
+  }
+
+  .main-nav {
+    flex-wrap: wrap;
+    gap: 1rem;
   }
 }
