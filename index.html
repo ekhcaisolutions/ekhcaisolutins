@@ -35,13 +35,34 @@
 
   <!-- ===== HEADER ===== -->
   <header class="site-header">
-    <!-- language switch -->
+    <!-- top bar: auth + language -->
     <div class="top-lang-bar">
-      <nav class="lang-nav">
-        <a href="./" class="active-lang">EN</a> |
-        <a href="fa/">FA</a> |
-        <a href="ar/">AR</a>
-      </nav>
+      <div class="top-bar-inner">
+        <!-- دکمه‌های ورود / ثبت نام / درخواست -->
+        <div class="top-auth">
+          <a href="#login" class="top-link">
+            <span class="top-link-icon">🔐</span>
+            <span>Login</span>
+          </a>
+          <span class="dot-separator">•</span>
+          <a href="#login" class="top-link">
+            <span class="top-link-icon">🧾</span>
+            <span>Sign up</span>
+          </a>
+          <span class="dot-separator">•</span>
+          <a href="#request" class="top-link top-link-pill">
+            <span class="top-link-icon">✨</span>
+            <span>Request AI Project</span>
+          </a>
+        </div>
+
+        <!-- language switch -->
+        <nav class="lang-nav">
+          <a href="./" class="active-lang">EN</a> |
+          <a href="fa/">FA</a> |
+          <a href="ar/">AR</a>
+        </nav>
+      </div>
     </div>
 
     <!-- لوگو + CTA بالا -->
@@ -59,12 +80,12 @@
 
       <!-- نوار اصلی منو -->
       <nav class="main-nav">
-        <!-- دکمه طلایی Services با منوی خودش -->
+        <!-- Services -->
         <button class="nav-primary-btn" id="servicesToggle" type="button">
           Services
         </button>
 
-        <!-- دکمه جداگانه Engineering & AI Services با منوی خودش -->
+        <!-- Engineering & AI Services -->
         <button class="nav-primary-btn" id="engineeringToggle" type="button">
           Engineering &amp; AI Services
         </button>
@@ -318,6 +339,101 @@
       </div>
     </section>
 
+    <!-- LOGIN / SIGNUP (صفحه ورود/ثبت‌نام) -->
+    <section id="login" class="section section-alt portal-section">
+      <div class="section-inner portal-inner">
+        <h2>Client Portal</h2>
+        <p class="portal-subtitle">
+          Create your account or sign in to manage your automation projects, AI systems and support requests.
+        </p>
+        <div class="portal-grid">
+          <!-- Sign up -->
+          <div class="portal-card">
+            <h3>Sign up</h3>
+            <p class="portal-text">
+              New to E.Kh.C.A.I Solutions? Share a few details and we will prepare your workspace.
+            </p>
+            <form action="#" method="post" class="portal-form">
+              <label>
+                Full name
+                <input type="text" name="name" placeholder="Your full name">
+              </label>
+              <label>
+                Company / Organization
+                <input type="text" name="company" placeholder="Company name">
+              </label>
+              <label>
+                Work email
+                <input type="email" name="email" placeholder="name@company.com">
+              </label>
+              <label>
+                Project focus
+                <textarea name="project" rows="3" placeholder="Automation, AI agents, data pipelines, DevOps..."></textarea>
+              </label>
+              <button type="submit" class="btn-primary btn-full">
+                Request account
+              </button>
+            </form>
+          </div>
+
+          <!-- Login -->
+          <div class="portal-card portal-card-accent">
+            <h3>Login</h3>
+            <p class="portal-text">
+              Already working with us? Use your email to access project updates and documentation.
+            </p>
+            <form action="#" method="post" class="portal-form">
+              <label>
+                Email
+                <input type="email" name="login_email" placeholder="name@company.com">
+              </label>
+              <label>
+                Password
+                <input type="password" name="password" placeholder="••••••••">
+              </label>
+              <div class="portal-options">
+                <label class="checkbox-inline">
+                  <input type="checkbox" name="remember">
+                  <span>Remember me on this device</span>
+                </label>
+                <a href="#" class="portal-link">Forgot password?</a>
+              </div>
+              <button type="submit" class="btn-primary btn-full">
+                Sign in
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Request (برای دکمه Request AI Project در نوار بالا) -->
+    <section id="request" class="section">
+      <div class="section-inner">
+        <h2>Request an AI Project</h2>
+        <p>
+          Describe your idea in a few lines and we will get back with a technical and business proposal.
+        </p>
+        <form action="#" method="post" class="portal-form request-form">
+          <label>
+            Name
+            <input type="text" name="req_name" placeholder="Your full name">
+          </label>
+          <label>
+            Email
+            <input type="email" name="req_email" placeholder="name@company.com">
+          </label>
+          <label>
+            Project description
+            <textarea name="req_desc" rows="4" placeholder="What do you want to automate or build with AI?"></textarea>
+          </label>
+          <button type="submit" class="btn-primary">
+            Send request
+          </button>
+        </form>
+      </div>
+    </section>
+
     <!-- Founder -->
     <section id="founder" class="section">
       <div class="section-inner founder">
@@ -417,7 +533,6 @@
       }
 
       document.addEventListener('click', function (e) {
-        // کلیک خارج از دو پنل
         if (
           servicesPanel   && !servicesPanel.contains(e.target) &&
           engineeringPanel && !engineeringPanel.contains(e.target) &&
