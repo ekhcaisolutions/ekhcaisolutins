@@ -1,5 +1,6 @@
 :root {
-  --bg: #05070a;
+  --bg: #05070a;        /* بدنه اصلی (سیاه) */
+  --bg-header: #070a12; /* رنگ مخصوص هدر */
   --bg-alt: #0b1018;
   --accent: #f5d27a;
   --accent-soft: #c9a75a;
@@ -18,44 +19,42 @@
 
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  /* بدنه: همون گراديان قبلی */
-  background: radial-gradient(circle at top, #121824 0, #05070a 60%);
+  background: var(--bg);
   color: var(--text);
   line-height: 1.6;
 }
 
-/* Hero (هدر بالا) */
-.hero {
-  padding: 3.5rem 1.5rem 2.5rem;
-  position: relative;
-  /* هدر رنگ جدا داشته باشد */
-  background: #020308;
+/* ===== HEADER WRAPPER ===== */
+
+.site-header {
+  background: radial-gradient(circle at top, #151b29 0, var(--bg-header) 65%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12); /* خط جداکننده از About */
+  padding: 0 1.5rem 0.75rem;
 }
 
-/* خط جداکننده بين هدر و بخش About */
-.hero::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 1px;
-  background: linear-gradient(
-    to right,
-    transparent,
-    rgba(245, 210, 122, 0.8),
-    transparent
-  );
+/* Hero (داخل هدر) */
+
+.hero {
+  padding: 1.8rem 0 1.6rem;
+}
+
+.hero-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
 }
 
 /* نوار زبان بالای هدر */
+
 .top-lang-bar {
   max-width: 1080px;
   margin: 0 auto;
-  padding: 0.5rem 0 0.25rem;
+  padding-top: 0.75rem;
 }
 
-/* منوی زبان */
 .lang-nav a,
 .lang-nav a:visited {
   color: var(--accent);
@@ -77,14 +76,7 @@ body {
   text-decoration: underline;
 }
 
-.hero-inner {
-  max-width: 1080px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-}
+/* لوگو */
 
 .logo-block {
   display: flex;
@@ -121,7 +113,7 @@ body {
   font-size: 0.95rem;
 }
 
-/* دکمه اصلی بالا */
+/* دکمه طلایی (CTA عمومی) */
 
 .btn-primary {
   padding: 0.85rem 1.8rem;
@@ -138,10 +130,78 @@ body {
   filter: brightness(1.05);
 }
 
-/* Sections */
+/* ===== MAIN NAV (زیر لوگو) ===== */
+
+.main-nav {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 0 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+  font-size: 0.95rem;
+}
+
+/* دکمه Services مستطیلی مانند CTA */
+
+.nav-cta {
+  padding: 0.6rem 1.6rem;
+  border-radius: 999px;        /* اگر میخوای کاملاً مستطیل بشه بکنش 8px */
+  border: 1px solid var(--accent);
+  background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+  color: var(--bg);
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 0 18px rgba(245, 210, 122, 0.35);
+}
+
+.nav-cta:hover {
+  filter: brightness(1.05);
+}
+
+.main-nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+
+.main-nav a:hover {
+  color: var(--accent);
+}
+
+.main-nav a.active-link {
+  color: var(--accent);
+}
+
+.main-nav a.active-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.25rem;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 999px;
+}
+
+/* RTL alignment for main nav */
+html[dir="rtl"] .main-nav {
+  justify-content: flex-end;
+}
+
+/* ===== خط جداکننده زیر هدر ===== */
+
+.header-divider {
+  height: 0;
+  margin-bottom: 1.2rem;
+}
+
+/* ===== SECTIONS (بدنه) ===== */
 
 .section {
   padding: 3rem 1.5rem;
+  background: var(--bg);
 }
 
 .section-alt {
@@ -158,7 +218,8 @@ body {
   margin-bottom: 1rem;
 }
 
-/* متن داخل سکشن‌ها محدود و خواناتر شود */
+/* متن داخل سکشن‌ها */
+
 .section-inner p {
   max-width: 60rem;
 }
@@ -216,6 +277,7 @@ body {
 .footer {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   padding: 1.5rem 1.5rem 2rem;
+  background: var(--bg);
 }
 
 .footer-inner {
@@ -223,65 +285,6 @@ body {
   margin: 0 auto;
   color: var(--muted);
   font-size: 0.9rem;
-}
-
-/* ===== Main top navigation ===== */
-
-.main-nav {
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 0.9rem 0 0.75rem;
-  display: flex;
-  align-items: center;
-  gap: 1.8rem;
-  font-size: 0.95rem;
-}
-
-/* دکمه طلایی Services – مستطیل */
-.main-nav .nav-primary-btn {
-  padding: 0.55rem 1.8rem;
-  border-radius: var(--radius);
-  border: 1px solid var(--accent);
-  background: linear-gradient(135deg, var(--accent), var(--accent-soft));
-  color: var(--bg);
-  font-weight: 600;
-  text-decoration: none;
-  box-shadow: 0 0 18px rgba(245, 210, 122, 0.35);
-}
-
-.main-nav .nav-primary-btn:hover {
-  filter: brightness(1.05);
-}
-
-.main-nav a {
-  color: var(--text);
-  text-decoration: none;
-  font-weight: 500;
-  position: relative;
-}
-
-.main-nav a:hover {
-  color: var(--accent);
-}
-
-.main-nav a.active-link {
-  color: var(--accent);
-}
-
-.main-nav a.active-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -0.25rem;
-  height: 2px;
-  background: var(--accent);
-  border-radius: 999px;
-}
-
-/* RTL alignment for main nav */
-html[dir="rtl"] .main-nav {
-  justify-content: flex-end;
 }
 
 /* ===== RTL support for Persian / Arabic pages ===== */
