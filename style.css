@@ -32,7 +32,7 @@ body {
   background: #020308;
 }
 
-/* خط جداکننده بين هدر و بخش About */
+/* خط جداکننده زير هدر */
 .hero::after {
   content: "";
   position: absolute;
@@ -142,6 +142,7 @@ body {
 
 .section {
   padding: 3rem 1.5rem;
+  position: relative; /* برای خط جداکننده */
 }
 
 .section-alt {
@@ -156,6 +157,22 @@ body {
 .section h2 {
   font-size: 1.6rem;
   margin-bottom: 1rem;
+}
+
+/* خط جداکننده طلایی بالای همه سکشن‌ها */
+.section::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(245, 210, 122, 0.8),
+    transparent
+  );
 }
 
 /* متن داخل سکشن‌ها محدود و خواناتر شود */
@@ -214,8 +231,8 @@ body {
 /* Footer */
 
 .footer {
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
   padding: 1.5rem 1.5rem 2rem;
+  position: relative;
 }
 
 .footer-inner {
@@ -223,6 +240,22 @@ body {
   margin: 0 auto;
   color: var(--muted);
   font-size: 0.9rem;
+}
+
+/* خط طلایی بالای فوتر */
+.footer::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(245, 210, 122, 0.8),
+    transparent
+  );
 }
 
 /* ===== Main top navigation ===== */
