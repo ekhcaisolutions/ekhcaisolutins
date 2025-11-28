@@ -18,21 +18,20 @@
 
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  /* بدنه: همون گراديان قبلی */
   background: radial-gradient(circle at top, #121824 0, #05070a 60%);
   color: var(--text);
   line-height: 1.6;
 }
 
-/* Hero (هدر بالا) */
+/* ================= HERO / HEADER ================= */
+
 .hero {
   padding: 3.5rem 1.5rem 2.5rem;
   position: relative;
-  /* هدر رنگ جدا داشته باشد */
   background: #020308;
 }
 
-/* خط جداکننده زير هدر */
+/* خط زير هدر */
 .hero::after {
   content: "";
   position: absolute;
@@ -48,14 +47,13 @@ body {
   );
 }
 
-/* نوار زبان بالای هدر */
+/* نوار زبان بالا */
 .top-lang-bar {
   max-width: 1080px;
   margin: 0 auto;
   padding: 0.5rem 0 0.25rem;
 }
 
-/* منوی زبان */
 .lang-nav a,
 .lang-nav a:visited {
   color: var(--accent);
@@ -76,6 +74,8 @@ body {
 .lang-nav a.active-lang {
   text-decoration: underline;
 }
+
+/* لوگو + CTA */
 
 .hero-inner {
   max-width: 1080px;
@@ -121,7 +121,7 @@ body {
   font-size: 0.95rem;
 }
 
-/* دکمه اصلی بالا */
+/* دكمه اصلي بالا */
 
 .btn-primary {
   padding: 0.85rem 1.8rem;
@@ -138,11 +138,67 @@ body {
   filter: brightness(1.05);
 }
 
-/* Sections */
+/* ================= MAIN NAV ================= */
+
+.main-nav {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0.9rem 0 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+  font-size: 0.95rem;
+}
+
+/* دكمه طلايي Services/خدمات */
+
+.main-nav .nav-primary-btn {
+  padding: 0.55rem 1.8rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--accent);
+  background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+  color: var(--bg);
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 0 18px rgba(245, 210, 122, 0.35);
+  cursor: pointer;
+}
+
+.main-nav .nav-primary-btn:hover {
+  filter: brightness(1.05);
+}
+
+.main-nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+
+.main-nav a:hover {
+  color: var(--accent);
+}
+
+.main-nav a.active-link {
+  color: var(--accent);
+}
+
+.main-nav a.active-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.25rem;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 999px;
+}
+
+/* ================= SECTIONS ================= */
 
 .section {
   padding: 3rem 1.5rem;
-  position: relative; /* برای خط جداکننده */
+  position: relative;
 }
 
 .section-alt {
@@ -159,7 +215,8 @@ body {
   margin-bottom: 1rem;
 }
 
-/* خط جداکننده طلایی بالای همه سکشن‌ها */
+/* خط طلايي بالاي هر سكشن */
+
 .section::before {
   content: "";
   position: absolute;
@@ -175,12 +232,11 @@ body {
   );
 }
 
-/* متن داخل سکشن‌ها محدود و خواناتر شود */
 .section-inner p {
   max-width: 60rem;
 }
 
-/* Cards */
+/* كارت‌هاي خدمات */
 
 .cards {
   display: grid;
@@ -228,7 +284,7 @@ body {
   font-size: 0.9rem;
 }
 
-/* Footer */
+/* ================= FOOTER ================= */
 
 .footer {
   padding: 1.5rem 1.5rem 2rem;
@@ -242,7 +298,8 @@ body {
   font-size: 0.9rem;
 }
 
-/* خط طلایی بالای فوتر */
+/* خط طلايي بالاي فوتر */
+
 .footer::before {
   content: "";
   position: absolute;
@@ -258,133 +315,30 @@ body {
   );
 }
 
-/* ===== Main top navigation ===== */
-
-.main-nav {
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 0.9rem 0 0.75rem;
-  display: flex;
-  align-items: center;
-  gap: 1.8rem;
-  font-size: 0.95rem;
-}
-
-/* دکمه طلایی Services – دقیقا شبیه CTA بالا ولی کوچیک‌تر */
-
-.main-nav .nav-primary-btn {
-  padding: 0.6rem 1.8rem;
-  border-radius: 999px;
-  border: 1px solid var(--accent);
-  background: linear-gradient(135deg, var(--accent), var(--accent-soft));
-  color: var(--bg);
-  font-weight: 600;
-  text-decoration: none;
-  box-shadow: 0 0 18px rgba(245, 210, 122, 0.35);
-  cursor: pointer;
-  outline: none;
-}
-
-.main-nav .nav-primary-btn:hover {
-  filter: brightness(1.05);
-}
-
-.main-nav .nav-primary-btn.is-open {
-  box-shadow: 0 0 26px rgba(245, 210, 122, 0.5);
-}
-
-.main-nav a {
-  color: var(--text);
-  text-decoration: none;
-  font-weight: 500;
-  position: relative;
-}
-
-.main-nav a:hover {
-  color: var(--accent);
-}
-
-.main-nav a.active-link {
-  color: var(--accent);
-}
-
-.main-nav a.active-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -0.25rem;
-  height: 2px;
-  background: var(--accent);
-  border-radius: 999px;
-}
-
-/* RTL alignment for main nav */
-html[dir="rtl"] .main-nav {
-  justify-content: flex-end;
-}
-
-/* ===== منوی بازشونده‌ی Services ===== */
-
-.services-panel {
-  display: none;
-  background: #05070f;
-  border-top: 1px solid rgba(245, 210, 122, 0.4);
-  border-bottom: 1px solid rgba(245, 210, 122, 0.15);
-}
-
-.services-panel.open {
-  display: block;
-}
-
-.services-panel-inner {
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 1.6rem 1.5rem 2rem;
-}
-
-.services-columns {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 2rem;
-}
-
-.services-col h4 {
-  font-size: 1rem;
-  margin-bottom: 0.6rem;
-  color: var(--accent);
-}
-
-.services-col ul {
-  list-style: none;
-}
-
-.services-col li + li {
-  margin-top: 0.4rem;
-}
-
-.services-col a {
-  color: var(--text);
-  text-decoration: none;
-  font-size: 0.9rem;
-}
-
-.services-col a:hover {
-  color: var(--accent);
-}
-
-/* ===== RTL support for Persian / Arabic pages ===== */
+/* ================= RTL SUPPORT ================= */
 
 html[dir="rtl"] body {
   direction: rtl;
 }
 
+/* لوگو راست، دكمه مشاوره چپ */
+html[dir="rtl"] .hero-inner {
+  flex-direction: row-reverse;
+}
+
+/* منو: از راست شروع شود و ترتيب برعكس انگليسي باشد */
+html[dir="rtl"] .main-nav {
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+}
+
+/* چيدمان متن‌ها در سكشن‌ها */
+
 html[dir="rtl"] .hero-inner,
 html[dir="rtl"] .section-inner,
 html[dir="rtl"] .cards,
 html[dir="rtl"] .contact-grid,
-html[dir="rtl"] .footer-inner,
-html[dir="rtl"] .services-panel-inner {
+html[dir="rtl"] .footer-inner {
   text-align: right;
 }
 
@@ -395,12 +349,11 @@ html[dir="rtl"] .logo-block {
 html[dir="rtl"] .card,
 html[dir="rtl"] .founder-text,
 html[dir="rtl"] .contact-info,
-html[dir="rtl"] .contact-extra,
-html[dir="rtl"] .services-col {
+html[dir="rtl"] .contact-extra {
   text-align: right;
 }
 
-/* Responsive */
+/* ================= RESPONSIVE ================= */
 
 @media (max-width: 768px) {
   .hero-inner {
@@ -423,9 +376,5 @@ html[dir="rtl"] .services-col {
   .main-nav {
     flex-wrap: wrap;
     gap: 1rem;
-  }
-
-  .services-columns {
-    grid-template-columns: 1fr;
   }
 }
