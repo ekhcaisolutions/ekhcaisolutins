@@ -18,7 +18,6 @@
 
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  /* بدنه: همون گراديان قبلی */
   background: radial-gradient(circle at top, #121824 0, #05070a 60%);
   color: var(--text);
   line-height: 1.6;
@@ -28,7 +27,6 @@ body {
 .hero {
   padding: 3.5rem 1.5rem 2.5rem;
   position: relative;
-  /* هدر رنگ جدا داشته باشد */
   background: #020308;
 }
 
@@ -48,11 +46,60 @@ body {
   );
 }
 
-/* نوار زبان بالای هدر */
+/* ===== TOP BAR (login / signup / request + language) ===== */
+
 .top-lang-bar {
+  background: #05070a;
+  border-bottom: 1px solid rgba(245, 210, 122, 0.12);
+}
+
+.top-bar-inner {
   max-width: 1080px;
   margin: 0 auto;
-  padding: 0.5rem 0 0.25rem;
+  padding: 0.5rem 1.5rem 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.85rem;
+}
+
+.top-auth {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.top-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+  color: var(--muted);
+  opacity: 0.9;
+  transition: color 0.2s ease, opacity 0.2s ease, transform 0.15s ease;
+}
+
+.top-link-icon {
+  font-size: 0.9rem;
+}
+
+.top-link:hover {
+  color: var(--accent);
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.top-link-pill {
+  padding: 4px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(245, 210, 122, 0.55);
+  background: radial-gradient(circle at top, rgba(245, 210, 122, 0.12), transparent);
+}
+
+.dot-separator {
+  color: var(--muted);
+  opacity: 0.6;
 }
 
 /* منوی زبان */
@@ -76,6 +123,8 @@ body {
 .lang-nav a.active-lang {
   text-decoration: underline;
 }
+
+/* Hero inner */
 
 .hero-inner {
   max-width: 1080px;
@@ -122,7 +171,6 @@ body {
 }
 
 /* دکمه اصلی بالا */
-
 .btn-primary {
   padding: 0.85rem 1.8rem;
   border-radius: 999px;
@@ -142,7 +190,7 @@ body {
 
 .section {
   padding: 3rem 1.5rem;
-  position: relative; /* برای خط جداکننده */
+  position: relative;
 }
 
 .section-alt {
@@ -159,7 +207,7 @@ body {
   margin-bottom: 1rem;
 }
 
-/* خط جداکننده طلایی بالای همه سکشن‌ها */
+/* خط جداکننده طلایی بالای سکشن‌ها */
 .section::before {
   content: "";
   position: absolute;
@@ -175,7 +223,7 @@ body {
   );
 }
 
-/* متن داخل سکشن‌ها محدود و خواناتر شود */
+/* متن داخل سکشن‌ها محدود و خواناتر */
 .section-inner p {
   max-width: 60rem;
 }
@@ -270,8 +318,7 @@ body {
   font-size: 0.95rem;
 }
 
-/* دکمه طلایی Services – دقیقا شبیه CTA بالا ولی کوچیک‌تر */
-
+/* دکمه‌های طلایی منو (Services و Engineering) */
 .main-nav .nav-primary-btn {
   padding: 0.6rem 1.8rem;
   border-radius: 999px;
@@ -373,7 +420,133 @@ html[dir="rtl"] .main-nav {
   color: var(--accent);
 }
 
-/* ===== RTL support for Persian / Arabic pages ===== */
+/* ===== CLIENT PORTAL (Login / Sign up) ===== */
+
+.portal-section {
+  border-top: 1px solid rgba(245, 210, 122, 0.08);
+}
+
+.portal-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.portal-subtitle {
+  margin-top: 6px;
+  margin-bottom: 24px;
+  color: var(--muted);
+  max-width: 640px;
+}
+
+.portal-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 24px;
+}
+
+.portal-card {
+  padding: 24px 24px 20px;
+  border-radius: var(--radius);
+  background: rgba(11, 16, 24, 0.9);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(245, 210, 122, 0.06);
+}
+
+.portal-card-accent {
+  background: radial-gradient(circle at top, rgba(245, 210, 122, 0.18), #05070a);
+  border-color: rgba(245, 210, 122, 0.35);
+}
+
+.portal-card h3 {
+  margin-bottom: 8px;
+}
+
+.portal-text {
+  margin-bottom: 16px;
+  color: var(--muted);
+}
+
+.portal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.portal-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.85rem;
+}
+
+.portal-form input,
+.portal-form textarea {
+  background: #05070a;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 8px 10px;
+  color: var(--text);
+  font: inherit;
+  outline: none;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+
+.portal-form input::placeholder,
+.portal-form textarea::placeholder {
+  color: rgba(160, 164, 176, 0.8);
+}
+
+.portal-form input:focus,
+.portal-form textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px rgba(245, 210, 122, 0.5);
+  background: #05070a;
+}
+
+.portal-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.checkbox-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.checkbox-inline input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+}
+
+.portal-link {
+  font-size: 0.8rem;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.portal-link:hover {
+  text-decoration: underline;
+}
+
+.btn-full {
+  width: 100%;
+  text-align: center;
+}
+
+/* Request form */
+.request-form {
+  max-width: 640px;
+  margin-top: 16px;
+}
+
+/* ===== RTL support ===== */
 
 html[dir="rtl"] body {
   direction: rtl;
@@ -427,5 +600,25 @@ html[dir="rtl"] .services-col {
 
   .services-columns {
     grid-template-columns: 1fr;
+  }
+
+  .top-bar-inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+  }
+
+  .top-auth {
+    justify-content: center;
+  }
+
+  .lang-nav {
+    text-align: center;
+  }
+}
+
+@media (max-width: 900px) {
+  .portal-grid {
+    grid-template-columns: minmax(0, 1fr);
   }
 }
