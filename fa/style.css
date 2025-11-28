@@ -6,277 +6,448 @@
   --text: #f5f5f5;
   --muted: #a0a4b0;
   --radius: 14px;
-  --border: #1b2230;
-  --danger: #ff4d4f;
 }
 
-/* RESET ساده */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-html,
-body {
   margin: 0;
   padding: 0;
 }
 
-/* بدنه صفحه فارسی */
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   background: radial-gradient(circle at top, #121824 0, #05070a 60%);
   color: var(--text);
   line-height: 1.6;
-  direction: rtl;
-  text-align: right;
 }
 
-/* لینک‌ها به‌طور کلی */
-a {
-  color: var(--accent);
-  text-decoration: none;
-  transition: color 0.2s ease, opacity 0.2s ease;
-}
+/* ===== HERO / HEADER ===== */
 
-a:hover {
-  color: var(--accent-soft);
-  opacity: 0.9;
-}
-
-/* کانتینر اصلی */
-.container {
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 24px 16px 40px;
-}
-
-/* نوار سوییچ زبان – فقط اگر خودت کلاس دادی */
-.lang-switch,
-.lang-menu {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  align-items: center;
-  justify-content: flex-start;
-  margin-bottom: 16px;
-  font-size: 0.9rem;
-  color: var(--muted);
-}
-
-/* لینک‌های داخل سوییچ زبان */
-.lang-switch a,
-.lang-menu a {
-  padding: 2px 8px;
-  border-radius: 999px;
-  border: 1px solid transparent;
-}
-
-.lang-switch a.active,
-.lang-menu a.active {
-  border-color: var(--accent);
-  background: rgba(245, 210, 122, 0.06);
-  color: var(--accent);
-  font-weight: 600;
-}
-
-/* هدر بالا / Hero */
 .hero {
-  border-radius: 24px;
-  padding: 24px 20px;
-  background: radial-gradient(circle at top left, #20283a 0, #05070a 65%);
-  border: 1px solid var(--border);
-  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.65);
-  margin-bottom: 28px;
-}
-
-.hero-title {
-  font-size: clamp(1.6rem, 2.2vw + 1rem, 2.1rem);
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  margin-bottom: 10px;
-}
-
-.hero-subtitle {
-  font-size: 0.98rem;
-  color: var(--muted);
-  max-width: 42rem;
-  margin-bottom: 18px;
-}
-
-/* چپ‌چین کردن متن‌های انگلیسی/کد داخل پاراگراف فارسی */
-.ltr,
-code,
-pre {
-  direction: ltr;
-  text-align: left;
-}
-
-/* دکمه‌ها */
-.btn-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 8px 14px;
-  border-radius: 999px;
-  border: 1px solid var(--accent-soft);
-  background: rgba(5, 7, 10, 0.9);
-  color: var(--text);
-  font-size: 0.9rem;
-  cursor: pointer;
-  transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
-}
-
-.btn-primary {
-  background: linear-gradient(135deg, var(--accent), var(--accent-soft));
-  color: #120f07;
-  border-color: transparent;
-  font-weight: 600;
-}
-
-.btn:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-}
-
-/* Grid کارت‌ها */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
-  margin-top: 24px;
-}
-
-@media (max-width: 960px) {
-  .grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 640px) {
-  .grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
-}
-
-/* کارت عمومی */
-.card {
-  border-radius: var(--radius);
-  padding: 16px 14px;
-  background: radial-gradient(circle at top, #171d2a 0, #05070a 70%);
-  border: 1px solid var(--border);
-  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.55);
+  padding: 3.5rem 1.5rem 2.5rem;
   position: relative;
-  overflow: hidden;
+  background: #020308;
 }
 
-.card::before {
+/* خط جداکننده زير هدر */
+.hero::after {
   content: "";
   position: absolute;
-  inset-inline-start: -30%;
-  inset-block-start: -30%;
-  width: 60%;
-  height: 60%;
-  background: radial-gradient(circle, rgba(245, 210, 122, 0.1) 0, transparent 60%);
-  opacity: 0;
-  transition: opacity 0.25s ease;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(245, 210, 122, 0.8),
+    transparent
+  );
 }
 
-.card:hover::before {
-  opacity: 1;
+/* نوار زبان بالاي هدر */
+.top-lang-bar {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0.5rem 0 0.25rem;
 }
 
-.card-title {
-  font-size: 1rem;
-  font-weight: 600;
-  margin-bottom: 6px;
+/* منوي زبان */
+.lang-nav a,
+.lang-nav a:visited {
+  color: var(--accent);
+  text-decoration: none;
+  margin-right: 0.75rem;
+  font-weight: 500;
+  font-size: 0.9rem;
 }
 
-.card-subtitle {
-  font-size: 0.88rem;
-  color: var(--muted);
-  margin-bottom: 10px;
+.lang-nav a:last-child {
+  margin-right: 0;
 }
 
-.card-tag-row {
+.lang-nav a:hover {
+  color: #ffffff;
+}
+
+.lang-nav a.active-lang {
+  text-decoration: underline;
+}
+
+.hero-inner {
+  max-width: 1080px;
+  margin: 0 auto;
   display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin-top: 6px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
 }
 
-.tag {
-  font-size: 0.78rem;
-  padding: 2px 8px;
+.logo-block {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.logo-circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.logo-text h1 {
+  font-size: 1.9rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.logo-text h1 span {
+  display: block;
+  font-size: 1.6rem;
+}
+
+.tagline {
+  margin-top: 0.5rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* دكمه CTA بالا */
+
+.btn-primary {
+  padding: 0.85rem 1.8rem;
   border-radius: 999px;
-  border: 1px solid rgba(160, 164, 176, 0.5);
-  color: var(--muted);
-}
-
-/* لیست‌ها */
-ul,
-ol {
-  padding-inline-start: 1.2rem;
-  margin: 0.4rem 0;
-}
-
-li {
-  margin-bottom: 0.15rem;
-}
-
-/* باکس‌های هشدار/نکته */
-.alert {
-  border-radius: var(--radius);
-  padding: 10px 12px;
-  margin-top: 16px;
-  font-size: 0.9rem;
-  border: 1px solid var(--border);
-  background: rgba(11, 16, 24, 0.95);
-}
-
-.alert-danger {
-  border-color: rgba(255, 77, 79, 0.8);
-  background: rgba(120, 24, 30, 0.18);
-  color: #ffd1d3;
-}
-
-/* فوتر */
-.footer {
-  margin-top: 32px;
-  padding-top: 16px;
-  border-top: 1px solid var(--border);
-  font-size: 0.8rem;
-  color: var(--muted);
-}
-
-/* جدول‌ها اگر در صفحه داشتی */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 12px;
-  font-size: 0.9rem;
-}
-
-th,
-td {
-  padding: 6px 8px;
-  border-bottom: 1px solid #20283a;
-}
-
-th {
-  text-align: right;
+  border: 1px solid var(--accent);
+  color: var(--bg);
+  background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+  text-decoration: none;
   font-weight: 600;
-  background: rgba(17, 23, 36, 0.85);
+  box-shadow: 0 0 25px rgba(245, 210, 122, 0.35);
 }
 
-tr:hover td {
-  background: rgba(16, 22, 33, 0.7);
+.btn-primary:hover {
+  filter: brightness(1.05);
+}
+
+/* ===== SECTIONS ===== */
+
+.section {
+  padding: 3rem 1.5rem;
+  position: relative;
+}
+
+.section-alt {
+  background: var(--bg-alt);
+}
+
+.section-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+/* خط جداكننده طلايي بالاي همه سكشن‌ها */
+.section::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(245, 210, 122, 0.8),
+    transparent
+  );
+}
+
+/* متن داخل سكشن‌ها محدودتر و خواناتر */
+.section-inner p {
+  max-width: 60rem;
+}
+
+/* ===== CARDS ===== */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.card {
+  background: #080c14;
+  border-radius: var(--radius);
+  padding: 1.4rem;
+  border: 1px solid rgba(245, 210, 122, 0.25);
+}
+
+.card h3 {
+  margin-bottom: 0.6rem;
+  color: var(--accent);
+}
+
+/* ===== FOUNDER ===== */
+
+.founder {
+  display: flex;
+  align-items: center;
+}
+
+.founder-text h3 {
+  margin-top: 0.4rem;
+  margin-bottom: 0.6rem;
+  color: var(--accent);
+}
+
+/* ===== CONTACT ===== */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1.2rem;
+}
+
+.small-note {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* ===== FOOTER ===== */
+
+.footer {
+  padding: 1.5rem 1.5rem 2rem;
+  position: relative;
+}
+
+.footer-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* خط طلايي بالاي فوتر */
+.footer::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(245, 210, 122, 0.8),
+    transparent
+  );
+}
+
+/* ===== MAIN TOP NAV ===== */
+
+.main-nav {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0.9rem 0 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+  font-size: 0.95rem;
+}
+
+/* دكمه طلايي Services / خدمات */
+
+.main-nav .nav-primary-btn {
+  padding: 0.6rem 1.8rem;
+  border-radius: 999px;
+  border: 1px solid var(--accent);
+  background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+  color: var(--bg);
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 0 18px rgba(245, 210, 122, 0.35);
+  cursor: pointer;
+  outline: none;
+}
+
+.main-nav .nav-primary-btn:hover {
+  filter: brightness(1.05);
+}
+
+.main-nav .nav-primary-btn.is-open {
+  box-shadow: 0 0 26px rgba(245, 210, 122, 0.5);
+}
+
+.main-nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+
+.main-nav a:hover {
+  color: var(--accent);
+}
+
+.main-nav a.active-link {
+  color: var(--accent);
+}
+
+.main-nav a.active-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.25rem;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 999px;
+}
+
+/* ===== SERVICES DROPDOWN MENU ===== */
+
+.services-panel {
+  display: none;
+  background: #05070f;
+  border-top: 1px solid rgba(245, 210, 122, 0.4);
+  border-bottom: 1px solid rgba(245, 210, 122, 0.15);
+}
+
+.services-panel.open {
+  display: block;
+}
+
+.services-panel-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 1.6rem 1.5rem 2rem;
+}
+
+.services-columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.services-col h4 {
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+  color: var(--accent);
+}
+
+.services-col ul {
+  list-style: none;
+}
+
+.services-col li + li {
+  margin-top: 0.4rem;
+}
+
+.services-col a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.services-col a:hover {
+  color: var(--accent);
+}
+
+/* ===== GENERIC RTL SUPPORT (fa + ar) ===== */
+
+html[dir="rtl"] body {
+  direction: rtl;
+}
+
+html[dir="rtl"] .hero-inner,
+html[dir="rtl"] .section-inner,
+html[dir="rtl"] .cards,
+html[dir="rtl"] .contact-grid,
+html[dir="rtl"] .footer-inner,
+html[dir="rtl"] .services-panel-inner {
+  text-align: right;
+}
+
+html[dir="rtl"] .logo-block {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .card,
+html[dir="rtl"] .founder-text,
+html[dir="rtl"] .contact-info,
+html[dir="rtl"] .contact-extra,
+html[dir="rtl"] .services-col {
+  text-align: right;
+}
+
+html[dir="rtl"] .main-nav {
+  justify-content: flex-end;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+  .hero-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  html[dir="rtl"] .hero-inner {
+    align-items: flex-end;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .main-nav {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .services-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== FA-SPECIFIC TWEAKS (فقط صفحه فارسي) ===== */
+
+/* لوگو راست، CTA چپ (آيينه EN) */
+html[lang="fa"][dir="rtl"] .hero-inner {
+  flex-direction: row-reverse;
+}
+
+/* بلوك لوگو هم آيينه شود */
+html[lang="fa"][dir="rtl"] .logo-block {
+  flex-direction: row-reverse;
+}
+
+/* منو زير لوگو، از سمت راست شروع شود (كه زير لوگو بنشيند نه زير دكمه) */
+html[lang="fa"][dir="rtl"] .main-nav {
+  flex-direction: row-reverse;
+  justify-content: flex-end; /* اين خط مهم است: منو را مي‌چسباند به سمت راست زير لوگو */
+}
+
+/* متن منوي خدمات براي فا */
+html[lang="fa"][dir="rtl"] .services-panel-inner,
+html[lang="fa"][dir="rtl"] .services-col {
+  text-align: right;
 }
