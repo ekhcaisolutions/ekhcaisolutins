@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Client Portal – E.Kh.C.A.I Solutions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Client portal for E.Kh.C.A.I Solutions – login and sign up to manage AI and automation projects.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="top-lang-bar">
+      <div class="top-bar-inner">
+        <div class="top-auth">
+          <a href="login.html" class="top-link">
+            <span class="top-link-icon">🔐</span>
+            <span>Login</span>
+          </a>
+          <span class="dot-separator">•</span>
+          <a href="login.html#signup" class="top-link">
+            <span class="top-link-icon">🧾</span>
+            <span>Sign up</span>
+          </a>
+          <span class="dot-separator">•</span>
+          <a href="request.html" class="top-link top-link-pill">
+            <span class="top-link-icon">✨</span>
+            <span>Request AI Project</span>
+          </a>
+        </div>
+
+        <nav class="lang-nav">
+          <a href="./">EN</a> |
+          <a href="fa/">FA</a> |
+          <a href="ar/">AR</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="hero">
+      <div class="hero-inner">
+        <div class="logo-block">
+          <div class="logo-circle">E.Kh</div>
+          <div class="logo-text">
+            <h1>E.Kh.C.A.I <span>Solutions</span></h1>
+            <p class="tagline">Client Portal – Secure Access to Your Projects.</p>
+          </div>
+        </div>
+        <a href="index.html#contact" class="btn-primary">Back to main site</a>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html#top">Home</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#engineering-ai-services">Engineering &amp; AI</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="login" class="section section-alt portal-section">
+      <div class="section-inner portal-inner">
+        <h2>Client Portal</h2>
+        <p class="portal-subtitle">
+          Sign in to view your automation pipelines, AI systems and support tickets – or create a new account to start.
+        </p>
+        <div class="portal-grid">
+          <!-- Sign up -->
+          <div id="signup" class="portal-card">
+            <h3>Sign up</h3>
+            <p class="portal-text">
+              New to E.Kh.C.A.I Solutions? Share a few details and we will prepare your workspace.
+            </p>
+            <form action="#" method="post" class="portal-form">
+              <label>
+                Full name
+                <input type="text" name="name" placeholder="Your full name">
+              </label>
+              <label>
+                Company / Organization
+                <input type="text" name="company" placeholder="Company name">
+              </label>
+              <label>
+                Work email
+                <input type="email" name="email" placeholder="name@company.com">
+              </label>
+              <label>
+                Project focus
+                <textarea name="project" rows="3" placeholder="Automation, AI agents, data pipelines, DevOps..."></textarea>
+              </label>
+              <button type="submit" class="btn-primary btn-full">
+                Request account
+              </button>
+            </form>
+          </div>
+
+          <!-- Login -->
+          <div class="portal-card portal-card-accent">
+            <h3>Login</h3>
+            <p class="portal-text">
+              Already working with us? Use your email to access project updates and documentation.
+            </p>
+            <form action="#" method="post" class="portal-form">
+              <label>
+                Email
+                <input type="email" name="login_email" placeholder="name@company.com">
+              </label>
+              <label>
+                Password
+                <input type="password" name="password" placeholder="••••••••">
+              </label>
+              <div class="portal-options">
+                <label class="checkbox-inline">
+                  <input type="checkbox" name="remember">
+                  <span>Remember me on this device</span>
+                </label>
+                <a href="#" class="portal-link">Forgot password?</a>
+              </div>
+              <button type="submit" class="btn-primary btn-full">
+                Sign in
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>© <span id="year"></span> E.Kh.C.A.I Solutions. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
