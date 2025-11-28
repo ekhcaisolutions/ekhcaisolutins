@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>طلب مشروع ذكاء اصطناعي – E.Kh.C.A.I Solutions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="نموذج طلب مشاريع الذكاء الاصطناعي، الأتمتة وهندسة البيانات في E.Kh.C.A.I Solutions.">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="top-lang-bar">
+      <div class="top-bar-inner">
+        <div class="top-auth">
+          <a href="login.html" class="top-link">
+            <span class="top-link-icon">🔐</span>
+            <span>دخول</span>
+          </a>
+          <span class="dot-separator">•</span>
+          <a href="login.html#signup" class="top-link">
+            <span class="top-link-icon">🧾</span>
+            <span>تسجيل</span>
+          </a>
+          <span class="dot-separator">•</span>
+          <a href="request.html" class="top-link top-link-pill">
+            <span class="top-link-icon">✨</span>
+            <span>طلب مشروع ذكاء اصطناعي</span>
+          </a>
+        </div>
+
+        <nav class="lang-nav">
+          <a href="../">EN</a> |
+          <a href="../fa/">FA</a> |
+          <a href="./" class="active-lang">AR</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="hero">
+      <div class="hero-inner">
+        <div class="logo-block">
+          <div class="logo-circle">E.Kh</div>
+          <div class="logo-text">
+            <h1>E.Kh.C.A.I <span>Solutions</span></h1>
+            <p class="tagline">أخبرنا بما تريد أن تبنيه باستخدام الذكاء الاصطناعي.</p>
+          </div>
+        </div>
+        <a href="index.html#services" class="btn-primary">العودة إلى الخدمات</a>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html#top">الرئيسية</a>
+        <a href="index.html#services">الخدمات</a>
+        <a href="index.html#founder">المؤسس</a>
+        <a href="index.html#contact">اتصل بنا</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="request" class="section section-alt portal-section">
+      <div class="section-inner portal-inner">
+        <h2>نموذج طلب مشروع ذكاء اصطناعي / أتمتة</h2>
+        <p class="portal-subtitle">
+          اكتب باختصار عن احتياجك، القيود الزمنية والتقنية، وسنعود إليك بخطة تقنية وخريطة طريق.
+        </p>
+        <form action="#" method="post" class="portal-form request-form">
+          <label>
+            الاسم الكامل
+            <input type="text" name="req_name" placeholder="اسمك">
+          </label>
+          <label>
+            اسم الشركة / المؤسسة
+            <input type="text" name="req_company" placeholder="اسم الشركة أو العلامة التجارية">
+          </label>
+          <label>
+            البريد الإلكتروني الوظيفي
+            <input type="email" name="req_email" placeholder="name@company.com">
+          </label>
+          <label>
+            نوع المشروع
+            <input type="text" name="req_type" placeholder="مثال: وكلاء ذكاء اصطناعي، Data Pipeline، DevOps، لوحة تحكم تحليلية...">
+          </label>
+          <label>
+            وصف المشروع
+            <textarea name="req_desc" rows="4" placeholder="اشرح ما الذي تريد أتمتته أو تحسينه."></textarea>
+          </label>
+          <label>
+            الإطار الزمني التقريبي
+            <input type="text" name="req_timeline" placeholder="مثال: ٤–٨ أسابيع">
+          </label>
+          <button type="submit" class="btn-primary">
+            إرسال الطلب
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>© <span id="year"></span> E.Kh.C.A.I Solutions. جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
