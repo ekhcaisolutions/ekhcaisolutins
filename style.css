@@ -270,20 +270,27 @@ body {
   font-size: 0.95rem;
 }
 
-/* دکمه طلایی Services – مستطیل */
+/* دکمه طلایی Services – دقیقا شبیه CTA بالا ولی کوچیک‌تر */
+
 .main-nav .nav-primary-btn {
-  padding: 0.55rem 1.8rem;
-  border-radius: var(--radius);
+  padding: 0.6rem 1.8rem;
+  border-radius: 999px;
   border: 1px solid var(--accent);
   background: linear-gradient(135deg, var(--accent), var(--accent-soft));
   color: var(--bg);
   font-weight: 600;
   text-decoration: none;
   box-shadow: 0 0 18px rgba(245, 210, 122, 0.35);
+  cursor: pointer;
+  outline: none;
 }
 
 .main-nav .nav-primary-btn:hover {
   filter: brightness(1.05);
+}
+
+.main-nav .nav-primary-btn.is-open {
+  box-shadow: 0 0 26px rgba(245, 210, 122, 0.5);
 }
 
 .main-nav a {
@@ -317,6 +324,55 @@ html[dir="rtl"] .main-nav {
   justify-content: flex-end;
 }
 
+/* ===== منوی بازشونده‌ی Services ===== */
+
+.services-panel {
+  display: none;
+  background: #05070f;
+  border-top: 1px solid rgba(245, 210, 122, 0.4);
+  border-bottom: 1px solid rgba(245, 210, 122, 0.15);
+}
+
+.services-panel.open {
+  display: block;
+}
+
+.services-panel-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 1.6rem 1.5rem 2rem;
+}
+
+.services-columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.services-col h4 {
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+  color: var(--accent);
+}
+
+.services-col ul {
+  list-style: none;
+}
+
+.services-col li + li {
+  margin-top: 0.4rem;
+}
+
+.services-col a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.services-col a:hover {
+  color: var(--accent);
+}
+
 /* ===== RTL support for Persian / Arabic pages ===== */
 
 html[dir="rtl"] body {
@@ -327,7 +383,8 @@ html[dir="rtl"] .hero-inner,
 html[dir="rtl"] .section-inner,
 html[dir="rtl"] .cards,
 html[dir="rtl"] .contact-grid,
-html[dir="rtl"] .footer-inner {
+html[dir="rtl"] .footer-inner,
+html[dir="rtl"] .services-panel-inner {
   text-align: right;
 }
 
@@ -338,7 +395,8 @@ html[dir="rtl"] .logo-block {
 html[dir="rtl"] .card,
 html[dir="rtl"] .founder-text,
 html[dir="rtl"] .contact-info,
-html[dir="rtl"] .contact-extra {
+html[dir="rtl"] .contact-extra,
+html[dir="rtl"] .services-col {
   text-align: right;
 }
 
@@ -365,5 +423,9 @@ html[dir="rtl"] .contact-extra {
   .main-nav {
     flex-wrap: wrap;
     gap: 1rem;
+  }
+
+  .services-columns {
+    grid-template-columns: 1fr;
   }
 }
