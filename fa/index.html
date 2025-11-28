@@ -2,26 +2,24 @@
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>E.Kh.C.A.I Solutions – راهکارهاي هوش مصنوعي و اتوماسيون هوشمند براي بسترهاي پيچيده</title>
-
+  <title>E.Kh.C.A.I Solutions – راهکارهاي هوش مصنوعي و اتوماسيون هوشمند</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-        content="E.Kh.C.A.I Solutions يک مجموعه فناوري با تمرکز بر اتوماسيون هوشمند، مهندسي هوش مصنوعي و طراحي سيستمهاي داده‌محور است که راهکارهاي قابل‌اعتماد، مقياس‌پذير و امن براي کسب‌وکارهاي مدرن ارائه مي‌کند.">
-
-  <!-- canonical + hreflang -->
-  <link rel="canonical" href="https://ekhcaisolutions.github.io/ekhcaisolutins/fa/">
-  <link rel="alternate" hreflang="fa" href="https://ekhcaisolutions.github.io/ekhcaisolutins/fa/">
-  <link rel="alternate" hreflang="ar" href="https://ekhcaisolutions.github.io/ekhcaisolutins/ar/">
-  <link rel="alternate" hreflang="en" href="https://ekhcaisolutions.github.io/ekhcaisolutins/">
-  <link rel="alternate" hreflang="x-default" href="https://ekhcaisolutions.github.io/ekhcaisolutins/">
-
+  <meta name="description" content="E.Kh.C.A.I Solutions – ارائه دهنده راهکارهاي هوش مصنوعي، اتوماسيون هوشمند و مهندسي داده به سرپرستي دکتر و مهندس فوق تخصص اسماعيل خطارجي.">
+  
+  <!-- hreflang / canonical -->
+  <link rel="canonical" href="https://ekhcaisolutions.github.io/ekhcaisolutins/fa/" />
+  <link rel="alternate" hreflang="fa" href="https://ekhcaisolutions.github.io/ekhcaisolutins/fa/" />
+  <link rel="alternate" hreflang="ar" href="https://ekhcaisolutions.github.io/ekhcaisolutins/ar/" />
+  <link rel="alternate" hreflang="en" href="https://ekhcaisolutions.github.io/ekhcaisolutins/" />
+  <link rel="alternate" hreflang="x-default" href="https://ekhcaisolutions.github.io/ekhcaisolutins/" />
+  
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 
-  <!-- ===== هدر (هم‌رنگ نسخه انگليسي، فقط RTL) ===== -->
-  <header class="hero" id="top">
-    <!-- نوار زبان -->
+  <!-- ===== هدر با نوار زبان، لوگو و دکمه CTA ===== -->
+  <header class="site-header">
+    <!-- سوییچ زبان -->
     <div class="top-lang-bar">
       <nav class="lang-nav">
         <a href="../">EN</a> |
@@ -30,76 +28,81 @@
       </nav>
     </div>
 
-    <!-- لوگو + CTA -->
-    <div class="hero-inner">
-      <div class="logo-block">
-        <div class="logo-circle">E.Kh</div>
-        <div class="logo-text">
-          <h1>E.Kh.C.A.I <span>Solutions</span></h1>
-          <p class="tagline">هوشمندسازي و اتوماسيون؛ مهندسي‌شده براي برتري.</p>
+    <!-- هرو: لوگو + دکمه مشاوره -->
+    <div class="hero" id="top">
+      <div class="hero-inner">
+        <div class="logo-block">
+          <div class="logo-circle">E.Kh</div>
+          <div class="logo-text">
+            <h1>E.Kh.C.A.I <span>Solutions</span></h1>
+            <p class="tagline">هوشمندسازي و اتوماسيون؛ مهندسي شده براي برتري.</p>
+          </div>
         </div>
+        <a href="#contact" class="btn-primary">درخواست مشاوره</a>
       </div>
-      <a href="#contact" class="btn-primary">درخواست مشاوره</a>
-    </div>
 
-    <!-- منوي اصلي + دکمه خدمات (مثل انگليسي) -->
-    <nav class="main-nav">
-      <button class="nav-primary-btn js-services-toggle">خدمات</button>
-      <a href="#top" class="active-link">خانه</a>
-      <a href="#about">درباره</a>
-      <a href="#founder">بنيانگذار</a>
-      <a href="#contact">ارتباط با ما</a>
-    </nav>
+      <!-- نوار منو + دکمه طلایی «خدمات» -->
+      <nav class="main-nav">
+        <button class="nav-primary-btn" id="servicesToggle" type="button">
+          خدمات
+        </button>
+
+        <a href="#top" class="active-link">خانه</a>
+        <a href="#about">درباره</a>
+        <a href="#founder">بنيانگذار</a>
+        <a href="#contact">ارتباط با ما</a>
+      </nav>
+    </div>
   </header>
 
-  <!-- ===== منوي بازشونده خدمات (فقط ساختار، لينک‌ها بعداً هر طور خواستي عوض کن) ===== -->
-  <section class="services-panel" aria-label="منوي خدمات">
+  <!-- ===== منوی بازشوندهٔ خدمات (زير هدر) ===== -->
+  <div class="services-panel" id="servicesPanel">
     <div class="services-panel-inner">
       <div class="services-columns">
         <div class="services-col">
           <h4>اتوماسيون و Workflow</h4>
           <ul>
-            <li><a href="#services">طراحي و پياده‌سازي n8n Workflow</a></li>
-            <li><a href="#services">يکپارچه‌سازي سيستم‌ها با API</a></li>
-            <li><a href="#services">اتوماسيون فرآيندهاي سازماني</a></li>
+            <li><a href="#services">اتوماسيون فرآيندهاي کسب‌وکار</a></li>
+            <li><a href="#services">يکپارچه‌سازي n8n و API ها</a></li>
+            <li><a href="#services">Pipeline هاي اتوماسيون بازاريابي</a></li>
           </ul>
         </div>
         <div class="services-col">
           <h4>هوش مصنوعي و مهندسي داده</h4>
           <ul>
-            <li><a href="#services">طراحي Data Pipeline</a></li>
-            <li><a href="#services">مدل‌هاي تحليلي و پيش‌بيني</a></li>
-            <li><a href="#services">داشبورد و گزارش‌گيري هوشمند</a></li>
+            <li><a href="#services">دستيارهاي هوشمند مبتني بر LLM</a></li>
+            <li><a href="#services">Data Pipeline و ETL</a></li>
+            <li><a href="#services">تحليل داده و داشبوردهاي مديريتي</a></li>
           </ul>
         </div>
         <div class="services-col">
           <h4>Scraping و زيرساخت DevOps</h4>
           <ul>
-            <li><a href="#services">اسکرپرهاي پايدار براي سايت‌ها</a></li>
-            <li><a href="#services">زيرساخت Docker و Linux Server</a></li>
-            <li><a href="#services">پايش و بهينه‌سازي کارايي</a></li>
+            <li><a href="#services">زيرساخت اسکرپينگ قابل اعتماد</a></li>
+            <li><a href="#services">Docker و سخت‌سازي لينوکس</a></li>
+            <li><a href="#services">مانيتورينگ و بهينه‌سازي کارايي</a></li>
           </ul>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- ===== بدنه ===== -->
+  <!-- ===== بدنه سايت ===== -->
   <main>
-    <!-- About -->
+    <!-- درباره -->
     <section id="about" class="section">
       <div class="section-inner">
-        <h2>E.Kh.C.A.I Solutions درباره</h2>
+        <h2>درباره E.Kh.C.A.I Solutions</h2>
         <p>
           شرکت E.Kh.C.A.I Solutions يک مجموعه فناوري با تمرکز بر اتوماسيون هوشمند، مهندسي هوش مصنوعي
-          و طراحي سيستم‌هاي داده‌محور است. اين شرکت به سرپرستي
-          <strong>دکتر و مهندس فوق‌تخصص اسماعيل خطارجي</strong>
-          راهکارهاي قابل‌اعتماد، مقياس‌پذير و امن براي کسب‌وکارهاي مدرن ارائه مي‌کند.
+          و طراحي سيستمهاي داده‌محور است. اين شرکت به سرپرستي
+          <strong>دکتر و مهندس فوق‌تخصص اسماعيل خطارجي</strong> راهکارهايي قابل اعتماد، مقياس‌پذير و امن
+          براي کسب‌وکارهاي مدرن ارائه مي‌کند.
         </p>
       </div>
     </section>
 
-    <!-- Services cards -->
+    <!-- خدمات -->
     <section id="services" class="section section-alt">
       <div class="section-inner">
         <h2>خدمات</h2>
@@ -107,29 +110,29 @@
           <article class="card">
             <h3>اتوماسيون و Workflow</h3>
             <p>
-              طراحي و پياده‌سازي فرآيندهاي هوشمند با استفاده از n8n، APIها و يکپارچه‌سازي سفارشي
+              طراحي و پياده‌سازي فرآيندهاي هوشمند با استفاده از n8n، API ها و يکپارچه‌سازي سفارشي
               براي حذف کارهاي تکراري و کاهش خطاها.
             </p>
           </article>
           <article class="card">
             <h3>هوش مصنوعي و مهندسي داده</h3>
             <p>
-              ساخت سيستم‌هاي مبتني بر هوش مصنوعي، Data Pipelineها و راهکارهاي تحليلي
+              ساخت سيستمهاي مبتني بر هوش مصنوعي، Data Pipeline ها و راهکارهاي تحليلي
               براي تبديل داده خام به تصميم‌هاي هوشمند.
             </p>
           </article>
           <article class="card">
             <h3>Scraping و زيرساخت DevOps</h3>
             <p>
-              اسکرپرهاي قابل‌اعتماد، سرويس‌هاي Docker شده، سرورهاي Linux و زيرساخت بهينه‌شده
-              براي محيط‌هاي Production.
+              اسکرپرهاي قابل اعتماد، سرويسهاي Docker شده، سرورهاي لينوکس و زيرساخت بهينه شده
+              براي محيطهاي Production.
             </p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Founder -->
+    <!-- بنيانگذار -->
     <section id="founder" class="section">
       <div class="section-inner founder">
         <div class="founder-text">
@@ -137,14 +140,14 @@
           <h3>دکتر و مهندس فوق‌تخصص اسماعيل خطارجي</h3>
           <p>
             متخصص پيشرفته در اتوماسيون هوشمند، سيستم‌عامل، پردازش با کارايي بالا
-            و معماري سرور و Cloud است. طراحي و مهندسي همه پروژه‌هاي E.Kh.C.A.I Solutions
+            و معماري سرور و Cloud. طراحي و مهندسي همه پروژه‌هاي E.Kh.C.A.I Solutions
             با تمرکز بر قابليت اطمينان، کارايي و امنيت زير نظر ايشان انجام مي‌شود.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Contact -->
+    <!-- ارتباط با ما -->
     <section id="contact" class="section section-alt">
       <div class="section-inner">
         <h2>ارتباط با ما</h2>
@@ -156,7 +159,7 @@
           <div class="contact-info">
             <p><strong>تلفن (واتساپ):</strong> ۹۸۹۰۲۵۷۳۸۲۶۴+</p>
             <p><strong>ايميل:</strong> ekhcaisolutions@gmail.com</p>
-            <p><strong>وب‌سايت:</strong> www.ekhcai.com (به زودي)</p>
+            <p><strong>وبسايت:</strong> www.ekhcai.com (به زودي)</p>
           </div>
           <div class="contact-extra">
             <p class="small-note">
@@ -175,21 +178,38 @@
     </div>
   </footer>
 
-  <!-- ===== اسکریپت‌ها ===== -->
+  <!-- اسکریپت سال و منوی خدمات -->
   <script>
-    // سال فوتر
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // باز و بسته کردن منوي خدمات
-    const servicesBtnFa = document.querySelector('.js-services-toggle');
-    const servicesPanelFa = document.querySelector('.services-panel');
+    (function () {
+      const toggle = document.getElementById('servicesToggle');
+      const panel  = document.getElementById('servicesPanel');
+      if (!toggle || !panel) return;
 
-    if (servicesBtnFa && servicesPanelFa) {
-      servicesBtnFa.addEventListener('click', () => {
-        servicesPanelFa.classList.toggle('open');
-        servicesBtnFa.classList.toggle('is-open');
+      function closePanel() {
+        panel.classList.remove('open');
+        toggle.classList.remove('is-open');
+      }
+
+      toggle.addEventListener('click', function (e) {
+        e.stopPropagation();
+        const isOpen = panel.classList.toggle('open');
+        toggle.classList.toggle('is-open', isOpen);
       });
-    }
+
+      document.addEventListener('click', function (e) {
+        if (!panel.contains(e.target) && e.target !== toggle) {
+          closePanel();
+        }
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          closePanel();
+        }
+      });
+    })();
   </script>
 </body>
 </html>
