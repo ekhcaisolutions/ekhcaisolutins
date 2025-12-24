@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Articles – E.Kh.C.A.I Solutions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Technical articles by E.Kh.C.A.I Solutions. Automation, AI engineering, data pipelines, and infrastructure.">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="top-lang-bar">
+      <div class="top-bar-inner">
+        <div class="top-auth">
+          <a href="../login.html" class="top-link"><span class="top-link-icon">🔐</span><span>Login</span></a>
+          <span class="dot-separator">•</span>
+          <a href="../login.html#signup" class="top-link"><span class="top-link-icon">🧾</span><span>Sign up</span></a>
+          <span class="dot-separator">•</span>
+          <a href="../request.html" class="top-link top-link-pill"><span class="top-link-icon">✨</span><span>Request AI Project</span></a>
+        </div>
+
+        <nav class="lang-nav">
+          <a href="../">EN</a> |
+          <a href="../fa/">FA</a> |
+          <a href="../ar/">AR</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="hero" id="top">
+      <div class="hero-inner">
+        <div class="logo-block">
+          <div class="logo-circle">E.Kh</div>
+          <div class="logo-text">
+            <h1>E.Kh.C.A.I <span>Solutions</span></h1>
+            <p class="tagline">Articles – Engineering notes, playbooks, and case studies.</p>
+          </div>
+        </div>
+        <a href="../request.html" class="btn-primary">Request a Consultation</a>
+      </div>
+
+      <nav class="main-nav">
+        <a href="../index.html#top">Home</a>
+        <a href="../about/">About</a>
+        <a href="../founder/">Founder</a>
+        <a href="../videos/">Videos</a>
+        <a href="./" class="active-link">Articles</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section section-alt">
+      <div class="section-inner">
+        <h2>Latest Articles</h2>
+        <p>Short, practical and technical. New posts will appear here.</p>
+
+        <div class="cards">
+          <article class="card">
+            <h3><a href="./post-001.html" style="color: inherit; text-decoration: none;">Post 001: What we automate first (a real checklist)</a></h3>
+            <p>How we pick high-ROI automation targets, validate constraints, and ship safely.</p>
+          </article>
+
+          <article class="card">
+            <h3><a href="./post-002.html" style="color: inherit; text-decoration: none;">Post 002: Scraping infrastructure that survives production</a></h3>
+            <p>Reliability patterns, retries, observability, and data quality guardrails.</p>
+          </article>
+
+          <article class="card">
+            <h3><a href="./post-003.html" style="color: inherit; text-decoration: none;">Post 003: Data pipeline basics (ETL/ELT) for teams</a></h3>
+            <p>Schema discipline, idempotency, and practical deployment hints.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>© <span id="year"></span> E.Kh.C.A.I Solutions. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
