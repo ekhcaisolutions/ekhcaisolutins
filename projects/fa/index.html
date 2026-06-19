@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Projects – E.Kh.C.A.I Solutions</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Portfolio of AI, automation, and engineering projects by E.Kh.C.A.I Solutions.">
+<link rel="canonical" href="https://ekhcaisolutions.github.io/ekhcaisolutins/projects/" />
+<link rel="stylesheet" href="../style.css">
+<style>
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.project-card {
+  background: #080c14;
+  border-radius: var(--radius);
+  border: 1px solid rgba(245,210,122,0.2);
+  overflow: hidden;
+  transition: border-color 0.25s, transform 0.25s;
+}
+.project-card:hover {
+  border-color: rgba(245,210,122,0.55);
+  transform: translateY(-4px);
+}
+.project-thumb {
+  width: 100%;
+  height: 170px;
+  background: #0b1018;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+  border-bottom: 1px solid rgba(245,210,122,0.12);
+  position: relative;
+  overflow: hidden;
+}
+.project-thumb::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(245,210,122,0.06), transparent 70%);
+}
+.project-body {
+  padding: 1.2rem 1.4rem 1.4rem;
+}
+.project-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 0.7rem;
+}
+.tag {
+  font-size: 0.72rem;
+  padding: 2px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(245,210,122,0.4);
+  color: var(--accent);
+  background: rgba(245,210,122,0.07);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.project-body h3 {
+  font-size: 1.05rem;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+.project-body p {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.65;
+  margin-bottom: 1rem;
+}
+.project-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: var(--muted);
+  border-top: 1px solid rgba(245,210,122,0.1);
+  padding-top: 0.8rem;
+}
+.project-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: gap 0.2s;
+}
+.project-link:hover { gap: 8px; }
+.filter-bar {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+.filter-btn {
+  padding: 5px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(245,210,122,0.3);
+  background: transparent;
+  color: var(--muted);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.filter-btn.active,
+.filter-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(245,210,122,0.07);
+}
+.page-intro {
+  color: var(--muted);
+  max-width: 52rem;
+  margin-top: 0.5rem;
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="top-lang-bar">
+    <div class="top-bar-inner">
+      <div class="top-auth">
+        <a href="../login.html" class="top-link"><span class="top-link-icon">🔐</span><span>Login</span></a>
+        <span class="dot-separator">•</span>
+        <a href="../login.html#signup" class="top-link"><span class="top-link-icon">🧾</span><span>Sign up</span></a>
+        <span class="dot-separator">•</span>
+        <a href="../request.html" class="top-link top-link-pill"><span class="top-link-icon">✨</span><span>Request AI Project</span></a>
+      </div>
+      <nav class="lang-nav">
+        <a href="./" class="active-lang">EN</a> |
+        <a href="../fa/">FA</a> |
+        <a href="../ar/">AR</a>
+      </nav>
+    </div>
+  </div>
+  <div class="hero" id="top">
+    <div class="hero-inner">
+      <div class="logo-block">
+        <div class="logo-circle">E.Kh</div>
+        <div class="logo-text">
+          <h1>E.Kh.C.A.I <span>Solutions</span></h1>
+          <p class="tagline">Intelligent Automation. Engineered for Excellence.</p>
+        </div>
+      </div>
+      <a href="../request.html" class="btn-primary">Request a Consultation</a>
+    </div>
+    <nav class="main-nav">
+      <a href="../">Home</a>
+      <a href="./" class="active-link">Projects</a>
+      <a href="../articles/">Articles</a>
+      <a href="../videos/">Videos</a>
+      <a href="../gallery/">Gallery</a>
+      <a href="../about/">About</a>
+      <a href="../founder/">Founder</a>
+      <a href="../#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="section">
+    <div class="section-inner">
+      <h2>Projects</h2>
+      <p class="page-intro">A selection of real-world AI, automation, and engineering solutions built for clients and research.</p>
+
+      <div class="filter-bar">
+        <button class="filter-btn active" onclick="filterProjects('all', this)">All</button>
+        <button class="filter-btn" onclick="filterProjects('AI', this)">AI</button>
+        <button class="filter-btn" onclick="filterProjects('DevOps', this)">DevOps</button>
+        <button class="filter-btn" onclick="filterProjects('Data', this)">Data</button>
+        <button class="filter-btn" onclick="filterProjects('Security', this)">Security</button>
+      </div>
+
+      <div class="project-grid" id="projectGrid">
+
+        <article class="project-card" data-tags="AI">
+          <div class="project-thumb">🤖</div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag">AI</span>
+              <span class="tag">n8n</span>
+              <span class="tag">LLM</span>
+            </div>
+            <h3>Enterprise Automation Agent</h3>
+            <p>Intelligent agent integrated with ERP and CRM systems to automate daily workflows, reporting, and follow-ups without human intervention.</p>
+            <div class="project-meta">
+              <span>2024</span>
+              <a href="#" class="project-link">View details →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-tags="Security">
+          <div class="project-thumb">🛡️</div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag">Security</span>
+              <span class="tag">Python</span>
+              <span class="tag">ML</span>
+            </div>
+            <h3>AI Threat Detection System</h3>
+            <p>Real-time log analysis using LLMs and ML models to detect attack patterns, anomalies, and unauthorized access across server infrastructure.</p>
+            <div class="project-meta">
+              <span>2024</span>
+              <a href="#" class="project-link">View details →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-tags="Data">
+          <div class="project-thumb">📊</div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag">Data</span>
+              <span class="tag">ETL</span>
+              <span class="tag">BI</span>
+            </div>
+            <h3>Smart BI Dashboard</h3>
+            <p>Predictive business intelligence dashboard with sales forecasting, trend analysis, and KPI tracking powered by advanced ML models.</p>
+            <div class="project-meta">
+              <span>2025</span>
+              <a href="#" class="project-link">View details →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-tags="DevOps">
+          <div class="project-thumb">🐳</div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag">DevOps</span>
+              <span class="tag">Docker</span>
+              <span class="tag">Linux</span>
+            </div>
+            <h3>Hardened Production Infrastructure</h3>
+            <p>Full Docker-first architecture with Linux hardening, CI/CD pipelines, monitoring stacks, and scalable VM/container management.</p>
+            <div class="project-meta">
+              <span>2024</span>
+              <a href="#" class="project-link">View details →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-tags="AI">
+          <div class="project-thumb">🧾</div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag">AI</span>
+              <span class="tag">OCR</span>
+              <span class="tag">NLP</span>
+            </div>
+            <h3>Document Intelligence Pipeline</h3>
+            <p>Multi-language OCR and NLP pipeline for extracting structured data from PDFs, contracts, and enterprise documents at scale.</p>
+            <div class="project-meta">
+              <span>2025</span>
+              <a href="#" class="project-link">View details →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-tags="AI">
+          <div class="project-thumb">📹</div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag">AI</span>
+              <span class="tag">Vision</span>
+              <span class="tag">Edge</span>
+            </div>
+            <h3>AI Video Analytics System</h3>
+            <p>Real-time video analytics for security, people counting, and behavioral analysis in physical spaces using edge AI models.</p>
+            <div class="project-meta">
+              <span>2025</span>
+              <a href="#" class="project-link">View details →</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <p>© <span id="year"></span> E.Kh.C.A.I Solutions. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+function filterProjects(tag, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.project-card').forEach(card => {
+    if (tag === 'all' || card.dataset.tags.includes(tag)) {
+      card.style.display = '';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+</script>
+</body>
+</html>

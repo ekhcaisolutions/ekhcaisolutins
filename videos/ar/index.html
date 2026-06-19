@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Videos – E.Kh.C.A.I Solutions</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Educational videos and tutorials on AI, automation, and engineering by E.Kh.C.A.I Solutions.">
+<link rel="canonical" href="https://ekhcaisolutions.github.io/ekhcaisolutins/videos/" />
+<link rel="stylesheet" href="../style.css">
+<style>
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.video-card {
+  background: #080c14;
+  border-radius: var(--radius);
+  border: 1px solid rgba(245,210,122,0.2);
+  overflow: hidden;
+  transition: border-color 0.25s, transform 0.25s;
+}
+.video-card:hover {
+  border-color: rgba(245,210,122,0.55);
+  transform: translateY(-4px);
+}
+.video-thumb {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  background: #060b14;
+  overflow: hidden;
+  cursor: pointer;
+}
+.video-thumb iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.video-thumb .thumb-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #0b1018, #060a12);
+}
+.play-circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(245,210,122,0.15);
+  border: 2px solid rgba(245,210,122,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  transition: background 0.2s, transform 0.2s;
+}
+.video-thumb:hover .play-circle {
+  background: rgba(245,210,122,0.28);
+  transform: scale(1.1);
+}
+.thumb-label {
+  font-size: 0.75rem;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+.video-body {
+  padding: 1.1rem 1.3rem 1.3rem;
+}
+.video-tag {
+  font-size: 0.72rem;
+  padding: 2px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(245,210,122,0.4);
+  color: var(--accent);
+  background: rgba(245,210,122,0.07);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  display: inline-block;
+  margin-bottom: 0.6rem;
+}
+.video-body h3 {
+  font-size: 0.97rem;
+  color: var(--text);
+  margin-bottom: 0.45rem;
+  line-height: 1.5;
+}
+.video-body p {
+  font-size: 0.86rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 0.9rem;
+}
+.video-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.78rem;
+  color: var(--muted);
+  border-top: 1px solid rgba(245,210,122,0.1);
+  padding-top: 0.75rem;
+}
+.video-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: gap 0.2s;
+}
+.video-link:hover { gap: 8px; }
+.filter-bar {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+.filter-btn {
+  padding: 5px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(245,210,122,0.3);
+  background: transparent;
+  color: var(--muted);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.filter-btn.active, .filter-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(245,210,122,0.07);
+}
+.page-intro { color: var(--muted); max-width: 52rem; margin-top: 0.5rem; }
+
+/* Modal lightbox for video */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.88);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+.modal-overlay.open { display: flex; }
+.modal-box {
+  width: 90%;
+  max-width: 800px;
+  background: #080c14;
+  border-radius: var(--radius);
+  border: 1px solid rgba(245,210,122,0.3);
+  overflow: hidden;
+}
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 1.2rem;
+  border-bottom: 1px solid rgba(245,210,122,0.12);
+}
+.modal-title { font-size: 0.95rem; color: var(--text); }
+.modal-close {
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 1.4rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0 4px;
+}
+.modal-close:hover { color: var(--accent); }
+.modal-video {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+.modal-video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.add-video-note {
+  background: rgba(245,210,122,0.05);
+  border: 1px dashed rgba(245,210,122,0.25);
+  border-radius: var(--radius);
+  padding: 1.2rem 1.5rem;
+  margin-top: 1.5rem;
+  color: var(--muted);
+  font-size: 0.87rem;
+}
+.add-video-note strong { color: var(--accent); }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="top-lang-bar">
+    <div class="top-bar-inner">
+      <div class="top-auth">
+        <a href="../login.html" class="top-link"><span class="top-link-icon">🔐</span><span>Login</span></a>
+        <span class="dot-separator">•</span>
+        <a href="../login.html#signup" class="top-link"><span class="top-link-icon">🧾</span><span>Sign up</span></a>
+        <span class="dot-separator">•</span>
+        <a href="../request.html" class="top-link top-link-pill"><span class="top-link-icon">✨</span><span>Request AI Project</span></a>
+      </div>
+      <nav class="lang-nav">
+        <a href="./" class="active-lang">EN</a> |
+        <a href="../fa/">FA</a> |
+        <a href="../ar/">AR</a>
+      </nav>
+    </div>
+  </div>
+  <div class="hero" id="top">
+    <div class="hero-inner">
+      <div class="logo-block">
+        <div class="logo-circle">E.Kh</div>
+        <div class="logo-text">
+          <h1>E.Kh.C.A.I <span>Solutions</span></h1>
+          <p class="tagline">Intelligent Automation. Engineered for Excellence.</p>
+        </div>
+      </div>
+      <a href="../request.html" class="btn-primary">Request a Consultation</a>
+    </div>
+    <nav class="main-nav">
+      <a href="../">Home</a>
+      <a href="../projects/">Projects</a>
+      <a href="../articles/">Articles</a>
+      <a href="./" class="active-link">Videos</a>
+      <a href="../gallery/">Gallery</a>
+      <a href="../about/">About</a>
+      <a href="../founder/">Founder</a>
+      <a href="../#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="section">
+    <div class="section-inner">
+      <h2>Videos</h2>
+      <p class="page-intro">Educational tutorials and technical sessions on AI, automation, and engineering.</p>
+
+      <div class="filter-bar">
+        <button class="filter-btn active" onclick="filterVideos('all', this)">All</button>
+        <button class="filter-btn" onclick="filterVideos('Tutorial', this)">Tutorials</button>
+        <button class="filter-btn" onclick="filterVideos('AI', this)">AI</button>
+        <button class="filter-btn" onclick="filterVideos('DevOps', this)">DevOps</button>
+        <button class="filter-btn" onclick="filterVideos('Python', this)">Python</button>
+      </div>
+
+      <div class="videos-grid" id="videosGrid">
+
+        <!-- برای هر ویدیو YouTube ID رو جایگزین YOUR_VIDEO_ID کن -->
+        <article class="video-card" data-tags="Tutorial AI">
+          <div class="video-thumb" onclick="openVideo('YOUR_VIDEO_ID_1', 'n8n Automation from Zero')">
+            <div class="thumb-placeholder">
+              <div class="play-circle">▶</div>
+              <span class="thumb-label">Click to play</span>
+            </div>
+          </div>
+          <div class="video-body">
+            <span class="video-tag">Tutorial</span>
+            <h3>n8n Workflow Automation from Zero</h3>
+            <p>Build intelligent automation workflows from scratch — connecting APIs, databases, and AI models with no code.</p>
+            <div class="video-meta">
+              <span>⏱ 45 min</span>
+              <a href="https://youtube.com" target="_blank" rel="noopener" class="video-link">Watch on YouTube →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="video-card" data-tags="Python AI">
+          <div class="video-thumb" onclick="openVideo('YOUR_VIDEO_ID_2', 'Python + AI for Engineers')">
+            <div class="thumb-placeholder">
+              <div class="play-circle">▶</div>
+              <span class="thumb-label">Click to play</span>
+            </div>
+          </div>
+          <div class="video-body">
+            <span class="video-tag">Python</span>
+            <h3>Python + AI for Engineers</h3>
+            <p>Practical course covering Python fundamentals, AI integration, and real-world engineering automation patterns.</p>
+            <div class="video-meta">
+              <span>⏱ 1.5 hr</span>
+              <a href="https://youtube.com" target="_blank" rel="noopener" class="video-link">Watch on YouTube →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="video-card" data-tags="DevOps">
+          <div class="video-thumb" onclick="openVideo('YOUR_VIDEO_ID_3', 'Docker + Linux Security')">
+            <div class="thumb-placeholder">
+              <div class="play-circle">▶</div>
+              <span class="thumb-label">Click to play</span>
+            </div>
+          </div>
+          <div class="video-body">
+            <span class="video-tag">DevOps</span>
+            <h3>Docker + Linux Security Deep Dive</h3>
+            <p>Hardening production servers, configuring secure containers, and setting up monitoring stacks for live environments.</p>
+            <div class="video-meta">
+              <span>⏱ 55 min</span>
+              <a href="https://youtube.com" target="_blank" rel="noopener" class="video-link">Watch on YouTube →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="video-card" data-tags="AI">
+          <div class="video-thumb" onclick="openVideo('YOUR_VIDEO_ID_4', 'Build an AI Agent')">
+            <div class="thumb-placeholder">
+              <div class="play-circle">▶</div>
+              <span class="thumb-label">Click to play</span>
+            </div>
+          </div>
+          <div class="video-body">
+            <span class="video-tag">AI</span>
+            <h3>Build an Autonomous AI Agent</h3>
+            <p>Step-by-step walkthrough of building enterprise agents that handle reporting, monitoring, and follow-ups autonomously.</p>
+            <div class="video-meta">
+              <span>⏱ 1 hr</span>
+              <a href="https://youtube.com" target="_blank" rel="noopener" class="video-link">Watch on YouTube →</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="add-video-note">
+        💡 <strong>How to add a video:</strong> Open <code>videos/index.html</code>, find <code>YOUR_VIDEO_ID_N</code> and replace it with your YouTube video ID (the part after <code>?v=</code> in the URL). The player will embed automatically.
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<!-- Video Modal -->
+<div class="modal-overlay" id="videoModal" onclick="closeVideo(event)">
+  <div class="modal-box">
+    <div class="modal-header">
+      <span class="modal-title" id="modalTitle"></span>
+      <button class="modal-close" onclick="closeVideo()">✕</button>
+    </div>
+    <div class="modal-video">
+      <iframe id="modalIframe" src="" allowfullscreen allow="autoplay; encrypted-media"></iframe>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <p>© <span id="year"></span> E.Kh.C.A.I Solutions. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+function filterVideos(tag, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.video-card').forEach(card => {
+    card.style.display = (tag === 'all' || card.dataset.tags.includes(tag)) ? '' : 'none';
+  });
+}
+
+function openVideo(id, title) {
+  if (!id || id.startsWith('YOUR_')) {
+    alert('YouTube video ID هنوز تنظیم نشده. در فایل HTML آن را جایگزین کنید.');
+    return;
+  }
+  document.getElementById('modalTitle').textContent = title;
+  document.getElementById('modalIframe').src = 'https://www.youtube.com/embed/' + id + '?autoplay=1';
+  document.getElementById('videoModal').classList.add('open');
+}
+
+function closeVideo(e) {
+  if (e && e.target !== document.getElementById('videoModal') && !e.target.classList.contains('modal-close')) return;
+  document.getElementById('videoModal').classList.remove('open');
+  document.getElementById('modalIframe').src = '';
+}
+
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeVideo({ target: document.getElementById('videoModal') }); });
+</script>
+</body>
+</html>
